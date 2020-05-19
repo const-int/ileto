@@ -1,11 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from 'img/logo.svg';
+import {createUseStyles} from 'react-jss';
+import Comp from "comp";
 import './App.css';
 
+const useStyles = createUseStyles({
+  myButton: {
+    color: 'green',
+  },
+})
+
+
 function App() {
+  const classes = useStyles()
+
   return (
     <div className="App">
-      <header className="App-header">
+      <Comp />
+      <header className={classes.myButton}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
