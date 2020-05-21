@@ -2,7 +2,6 @@ import React from 'react';
 import logo from 'img/logo.svg';
 import {createUseStyles} from 'react-jss';
 import Comp from "comp";
-import './App.css';
 
 const useStyles = createUseStyles({
   myButton: {
