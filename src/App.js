@@ -1,36 +1,15 @@
 import React from 'react';
-import logo from 'img/logo.svg';
-import {createUseStyles} from 'react-jss';
-import Comp from "comp";
-
-const useStyles = createUseStyles({
-  myButton: {
-    color: 'green',
-  },
-})
-
+import ThemeProvider from 'providers/ThemeProvider';
+import Comp from "components/Comp";
+import Container from 'components/Container';
 
 function App() {
-  const classes = useStyles()
-
   return (
-    <div className="App">
-      <Comp />
-      <header className={classes.myButton}>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Container>
+        <Comp />
+      </Container>
+    </ThemeProvider>
   );
 }
 
