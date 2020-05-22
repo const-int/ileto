@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import useStyles from "./useStyles";
+import useStyles from "components/Container/useStyles";
 
 function Container({ children }) {
   const classes = useStyles();

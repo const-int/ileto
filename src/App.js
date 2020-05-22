@@ -1,13 +1,13 @@
 import React from 'react';
 import ThemeProvider from 'providers/ThemeProvider';
-import Comp from "components/Comp";
+import Header from "components/Header";
 import Container from 'components/Container';
 
 function App() {
   return (
     <ThemeProvider>
       <Container>
-        <Comp />
+        <Header />
       </Container>
     </ThemeProvider>
   );
