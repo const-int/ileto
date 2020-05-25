@@ -1,7 +1,9 @@
 const Theme = {
+  font: {
+    mono: "'Roboto Mono', monospace",
+  },
   color: {
-    primary: "#FB7731",
-    secondary: "#F4F077"
+    primary: "#FB772F",
   }
 };
 
