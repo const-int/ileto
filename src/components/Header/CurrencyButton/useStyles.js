@@ -1,19 +1,6 @@
-import { createUseStyles } from "react-jss";
+import { makeStyles } from "@material-ui/core/styles";
 
-export default createUseStyles((theme) => ({
-  root: {
-    display: "inline-flex",
-    alignItems: "center",
-    padding: 0,
-    border: 0,
-    backgroundColor: "transparent",
-    fontFamily: theme.font.mono,
-    fontSize: 25,
-    fontWeight: 400,
-    lineHeight: "30px",
-    color: "#FFF",
-    outline: "none"
-  },
+export default makeStyles((theme) => ({
   arrow: {
     margin: [[5, 0, 0, 3]]
   }
