@@ -12,11 +12,13 @@ const StyledIconButton = withStyles((theme) => ({
   },
 }))(MuiIconButton);
 
-function IconButton({ icon, size, className, onClick }) {
+function IconButton({ icon, className, onClick, style }) {
   return (
     <StyledIconButton
       TouchRippleProps={{ style: { color: "rgba(255, 255, 255)" } }}
+      className={className}
       onClick={onClick}
+      style={style}
     >
       {icon}
     </StyledIconButton>
@@ -26,13 +28,13 @@ function IconButton({ icon, size, className, onClick }) {
 IconButton.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   className: PropTypes.string,
-  size: PropTypes.string,
   onClick: PropTypes.func,
+  style: PropTypes.object,
 };
 
 IconButton.defaultProps = {
   className: "",
-  size: "md",
+  style: {},
   onClick: () => {},
 };
 

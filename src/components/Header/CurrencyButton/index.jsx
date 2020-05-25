@@ -12,7 +12,7 @@ const StyledButton = withStyles((theme) => ({
     fontWeight: 400,
     borderRadius: 4,
     lineHeight: "30px",
-    padding: [[5, 8, 5, 10]],
+    padding: [[5, 10]],
     border: 0,
     backgroundColor: "transparent",
     fontFamily: theme.font.mono,
