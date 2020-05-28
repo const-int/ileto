@@ -5,6 +5,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    flexShrink: 0,
     height: 66,
     padding: [[0, 20]],
     backgroundColor: theme.color.primary,
