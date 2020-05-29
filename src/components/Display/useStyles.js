@@ -4,7 +4,7 @@ export default makeStyles(() => ({
   root: {
     position: "relative",
     display: "flex",
-    justifyContent: "center",
+    flexDirection: "column",
     alignItems: "center",
     backgroundColor: "#F1F3F2",
     height: "100%",
