@@ -9,5 +9,8 @@ export default makeStyles((theme) => ({
     height: 66,
     padding: [[0, 20]],
     backgroundColor: theme.color.primary,
+  },
+  swapButton: {
+    margin: [[0, 40]]
   }
 }));

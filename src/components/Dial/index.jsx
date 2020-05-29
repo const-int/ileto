@@ -1,6 +1,7 @@
 import React from "react";
 import DialButton from "components/Dial/DialButton";
 import useStyles from "components/Dial/useStyles";
+import BackspaceSvg from "components/Dial/img/backspace.svg";
 
 function Dial() {
   const classes = useStyles();
@@ -16,7 +17,10 @@ function Dial() {
       <DialButton label="7" />
       <DialButton label="8" />
       <DialButton label="9" />
-      <DialButton label="<-" action="delete" />
+      <DialButton
+        label={<img src={BackspaceSvg} alt="Backspace" />}
+        action="delete"
+      />
       <DialButton label="0" />
       <DialButton label="C" action="clear" />
     </div>

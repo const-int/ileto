@@ -10,10 +10,9 @@ export default function Comp() {
   return (
     <div className={classes.root}>
       <CurrencyButton currencyLabel="RUB" onClick={() => {}} />
-      <IconButton
-        icon={<img src={ArrowsSvg} alt="Swap" />}
-        style={{ margin: "0 40px" }}
-      />
+      <div className={classes.swapButton}>
+        <IconButton icon={<img src={ArrowsSvg} alt="Swap" />} />
+      </div>
       <CurrencyButton currencyLabel="USD" onClick={() => {}} />
     </div>
   );

@@ -2,19 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 import useStyles from "components/Dial/DialButton/useStyles";
+import { Button } from "@material-ui/core";
 
 function DialButton({ label, action }) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <div
-        className={classnames(classes.container, {
+      <Button
+        className={classnames(classes.button, {
           "is-filled": action === "clear",
         })}
       >
         {label}
-      </div>
+      </Button>
     </div>
   );
 }

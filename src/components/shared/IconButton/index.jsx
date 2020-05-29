@@ -8,18 +8,13 @@ const StyledIconButton = withStyles((theme) => ({
     padding: 0,
     height: 40,
     width: 40,
-    backgroundColor: "rgba(255, 255, 255, 0.2) !important",
+    backgroundColor: "rgba(255, 255, 255, 0.3) !important",
   },
 }))(MuiIconButton);
 
-function IconButton({ icon, className, onClick, style }) {
+function IconButton({ icon, className, onClick }) {
   return (
-    <StyledIconButton
-      TouchRippleProps={{ style: { color: "rgba(255, 255, 255)" } }}
-      className={className}
-      onClick={onClick}
-      style={style}
-    >
+    <StyledIconButton className={className} onClick={onClick}>
       {icon}
     </StyledIconButton>
   );

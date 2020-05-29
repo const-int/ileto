@@ -4,7 +4,8 @@ export default makeStyles(() => ({
   root: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr 1fr",
-    gridGap: "1px",
-    backgroundColor: "#E2E2E2"
+    gridGap: "2px",
+    backgroundColor: "#EAEAEA",
+    paddingTop: 2
   }
 }));
