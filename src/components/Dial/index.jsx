@@ -9,18 +9,20 @@ function Dial() {
 
   return (
     <div className={classes.root}>
-      <NumberButton label="1" onClick={() => {}} />
-      <NumberButton label="2" onClick={() => {}} />
-      <NumberButton label="3" onClick={() => {}} />
-      <NumberButton label="4" onClick={() => {}} />
-      <NumberButton label="5" onClick={() => {}} />
-      <NumberButton label="6" onClick={() => {}} />
-      <NumberButton label="7" onClick={() => {}} />
-      <NumberButton label="8" onClick={() => {}} />
-      <NumberButton label="9" onClick={() => {}} />
-      <BackspaceButton onClick={() => {}} />
-      <NumberButton label="0" onClick={() => {}} />
-      <ClearButton onClick={() => {}} />
+      <div className={classes.grid}>
+        <NumberButton label="1" onClick={() => {}} />
+        <NumberButton label="2" onClick={() => {}} />
+        <NumberButton label="3" onClick={() => {}} />
+        <NumberButton label="4" onClick={() => {}} />
+        <NumberButton label="5" onClick={() => {}} />
+        <NumberButton label="6" onClick={() => {}} />
+        <NumberButton label="7" onClick={() => {}} />
+        <NumberButton label="8" onClick={() => {}} />
+        <NumberButton label="9" onClick={() => {}} />
+        <BackspaceButton onClick={() => {}} />
+        <NumberButton label="0" onClick={() => {}} />
+        <ClearButton onClick={() => {}} />
+      </div>
     </div>
   );
 }
