@@ -7,7 +7,8 @@ export default makeStyles(() => ({
     alignItems: "center",
     height: "100%",
     width: "100%",
-    paddingBottom: 20
+    paddingBottom: 25,
+    minHeight: 175
   },
   container: {
     display: "flex",

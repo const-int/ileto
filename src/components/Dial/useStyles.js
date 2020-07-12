@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(() => ({
+export default makeStyles(({ breakpoints }) => ({
   root: {
     display: "flex",
     justifyContent: "center",
@@ -14,6 +14,10 @@ export default makeStyles(() => ({
     maxWidth: 480,
     backgroundColor: "#EAEAEA",
     paddingTop: 2,
+
+    [breakpoints.up("sm")]: {
+      maxWidth: 360
+    },
 
     "&::before, &::after": {
       content: "''",
