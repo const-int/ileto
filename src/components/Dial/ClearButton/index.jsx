@@ -8,7 +8,7 @@ function ClearButton({ onClick }) {
 
   return (
     <div className={classes.root}>
-      <Button onClick={onClick} className={classes.button}>
+      <Button onClick={onClick} className={classes.root}>
         C
       </Button>
     </div>

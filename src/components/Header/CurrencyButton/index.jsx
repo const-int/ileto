@@ -7,7 +7,7 @@ import useStyles from "./useStyles";
 
 const StyledButton = withStyles((theme) => ({
   root: {
-    color: "#FFF",
+    color: "#AAA",
     fontSize: 24,
     fontWeight: 400,
     borderRadius: 4,
@@ -17,6 +17,10 @@ const StyledButton = withStyles((theme) => ({
     backgroundColor: "transparent",
     fontFamily: theme.font.mono,
     letterSpacing: 0,
+
+    "&:hover": {
+      backgroundColor: "#F4F4F4",
+    },
   },
 }))(MuiButton);
 
@@ -25,7 +29,7 @@ function CurrencyButton({ currencyLabel, onClick }) {
 
   return (
     <StyledButton onClick={onClick}>
-      <span>{currencyLabel}</span>
+      <span className={classes.currency}>{currencyLabel}</span>
       <img src={DownArrowSvg} className={classes.arrow} alt="Open menu" />
     </StyledButton>
   );

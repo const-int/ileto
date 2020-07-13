@@ -9,20 +9,6 @@ function Chart() {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        <div className={classes.valuesSection}>
-          <div className={classes.sourceCurrencyValue}>
-            <span>13</span>
-          </div>
-          <div
-            className={classnames(
-              classes.targetCurrencyValue,
-              classes.bottomSection
-            )}
-          >
-            <span>230</span>
-          </div>
-        </div>
-
         <div className={classes.descriptionSection}>
           <div className={classes.currencyDescription}>
             <div className={classes.currencyShortName}>dollar</div>
@@ -37,6 +23,20 @@ function Chart() {
           >
             <div className={classes.currencyShortName}>ruble</div>
             <div className={classes.currencyCode}>RUB</div>
+          </div>
+        </div>
+
+        <div className={classes.valuesSection}>
+          <div className={classes.sourceCurrencyValue}>
+            <span>13</span>
+          </div>
+          <div
+            className={classnames(
+              classes.targetCurrencyValue,
+              classes.bottomSection
+            )}
+          >
+            <span>230</span>
           </div>
         </div>
       </div>

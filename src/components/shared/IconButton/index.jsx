@@ -6,9 +6,10 @@ import MuiIconButton from "@material-ui/core/IconButton";
 const StyledIconButton = withStyles((theme) => ({
   root: {
     padding: 0,
-    height: 40,
-    width: 40,
-    backgroundColor: "rgba(255, 255, 255, 0.3) !important",
+    height: 42,
+    width: 42,
+    color: "#FFF",
+    backgroundColor: "#FB772F !important",
   },
 }))(MuiIconButton);
 

@@ -9,8 +9,8 @@ function Display() {
 
   return (
     <div className={classes.root}>
-      <UpdateDate updateDate="12 october 2018" updateTime="18 PM" />
-      <RateDescription />
+      {/* <UpdateDate updateDate="12 october 2018" updateTime="18 PM" />
+      <RateDescription /> */}
       <Chart />
     </div>
   );

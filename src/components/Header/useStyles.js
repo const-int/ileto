@@ -6,9 +6,8 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     flexShrink: 0,
-    height: 66,
+    height: 86,
     padding: [[0, 20]],
-    backgroundColor: theme.color.primary,
   },
   swapButton: {
     margin: [[0, 40]]

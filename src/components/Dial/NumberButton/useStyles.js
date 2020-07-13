@@ -1,31 +1,23 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles((theme) => ({
+export default makeStyles(() => ({
   root: {
-    position: "relative",
-    backgroundColor: "#FFF",
-    paddingBottom: "60%"
-  },
-  button: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
+    width: "76px",
+    height: "76px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: 20,
-    lineHeight: "30px",
-    color: "#696F6C",
-    borderRadius: 0,
-    // "&.is-filled": {
-    //   color: "#FFF",
-    //   backgroundColor: theme.color.primary,
-    //   top: -1,
-    //   left: -1,
-    //   width: "calc(100% + 1px)",
-    //   height: "calc(100% + 1px)",
-    // }
+    padding: 0,
+    fontSize: 28,
+    fontWeight: 600,
+    lineHeight: "76px",
+    color: "#666666",
+    backgroundColor: "#F4F4F4 !important",
+    borderRadius: "50%",
+
+    "& .MuiButton-label": {
+      position: "relative",
+      top: 2
+    }
   }
 }));

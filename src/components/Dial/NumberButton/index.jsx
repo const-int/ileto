@@ -7,11 +7,9 @@ function NumberButton({ label, onClick }) {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Button className={classes.button} onClick={onClick}>
-        {label}
-      </Button>
-    </div>
+    <Button className={classes.root} onClick={onClick}>
+      {label}
+    </Button>
   );
 }
 

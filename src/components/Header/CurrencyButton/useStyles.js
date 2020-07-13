@@ -1,7 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
+  currency: {
+    color: theme.color.primary
+  },
   arrow: {
-    margin: [[6, 0, 0, 4]]
+    margin: [[6, 0, 0, 5]]
   }
 }));
