@@ -18,6 +18,6 @@ export default makeStyles((theme) => ({
   },
   img: {
     position: "relative",
-    left: -1
+    left: -2
   }
 }));
