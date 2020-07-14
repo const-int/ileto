@@ -8,16 +8,17 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     padding: 0,
-    color: "#666666",
+    color: theme.color.ripple,
     borderRadius: "50%",
     backgroundColor: "#F4F4F4 !important",
 
+    "& svg": {
+      position: "relative",
+      left: -2
+    },
+
     "& path": {
       fill: theme.color.primary
-    }
+    },
   },
-  img: {
-    position: "relative",
-    left: -2
-  }
 }));

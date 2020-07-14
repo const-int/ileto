@@ -10,6 +10,6 @@ export default makeStyles((theme) => ({
     padding: [[0, 20]],
   },
   swapButton: {
-    margin: [[0, 40]]
+    margin: [[0, 42]]
   }
 }));

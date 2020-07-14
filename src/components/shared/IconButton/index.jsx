@@ -1,23 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import MuiIconButton from "@material-ui/core/IconButton";
-
-const StyledIconButton = withStyles((theme) => ({
-  root: {
-    padding: 0,
-    height: 42,
-    width: 42,
-    color: "#FFF",
-    backgroundColor: "#FB772F !important",
-  },
-}))(MuiIconButton);
+import classnames from "classnames";
+import { Button } from "@material-ui/core";
+import useStyles from "./useStyles";
 
 function IconButton({ icon, className, onClick }) {
+  const classes = useStyles();
+
   return (
-    <StyledIconButton className={className} onClick={onClick}>
+    <Button className={classnames(classes.root, className)} onClick={onClick}>
       {icon}
-    </StyledIconButton>
+    </Button>
   );
 }
 

@@ -13,6 +13,7 @@ const Theme = createMuiTheme({
   },
   color: {
     primary: "#FB772F",
+    ripple: "#BBBBBB",
   }
 });
 

@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     height: "100%",
     width: "100%",
-    paddingBottom: 10,
+    paddingBottom: 14,
     minHeight: 175
   },
   container: {

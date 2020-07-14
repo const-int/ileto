@@ -7,20 +7,16 @@ import useStyles from "./useStyles";
 
 const StyledButton = withStyles((theme) => ({
   root: {
-    color: "#AAA",
+    padding: [[5, 10]],
+    letterSpacing: 0,
+    fontFamily: theme.font.mono,
     fontSize: 24,
     fontWeight: 400,
-    borderRadius: 4,
     lineHeight: "30px",
-    padding: [[5, 10]],
+    borderRadius: 8,
     border: 0,
+    color: theme.color.ripple,
     backgroundColor: "transparent",
-    fontFamily: theme.font.mono,
-    letterSpacing: 0,
-
-    "&:hover": {
-      backgroundColor: "#F4F4F4",
-    },
   },
 }))(MuiButton);
 
