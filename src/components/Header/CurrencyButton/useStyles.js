@@ -5,6 +5,10 @@ export default makeStyles((theme) => ({
     color: theme.color.primary
   },
   arrow: {
-    margin: [[6, 0, 0, 5]]
+    margin: [[6, 0, 0, 5]],
+
+    "& line": {
+      stroke: theme.color.primary
+    }
   }
 }));

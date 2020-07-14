@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import MuiButton from "@material-ui/core/Button";
-import DownArrowSvg from "components/Header/CurrencyButton/img/down-arrow.svg";
 import useStyles from "./useStyles";
 
 const StyledButton = withStyles((theme) => ({
@@ -26,7 +25,26 @@ function CurrencyButton({ currencyLabel, onClick }) {
   return (
     <StyledButton onClick={onClick}>
       <span className={classes.currency}>{currencyLabel}</span>
-      <img src={DownArrowSvg} className={classes.arrow} alt="Open menu" />
+
+      <svg className={classes.arrow} width="11" height="7" viewBox="0 0 11 7">
+        <line
+          x1="1.81656"
+          y1="2"
+          x2="5.40234"
+          y2="5.58579"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <line
+          x1="1"
+          y1="-1"
+          x2="6.07107"
+          y2="-1"
+          transform="matrix(-0.707107 0.707107 0.707107 0.707107 10.4023 2)"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
     </StyledButton>
   );
 }

@@ -8,8 +8,13 @@ export default makeStyles((theme) => ({
     flexShrink: 0,
     height: 86,
     padding: [[0, 20]],
+
   },
   swapButton: {
-    margin: [[0, 42]]
+    margin: [[0, 42]],
+
+    "& svg line": {
+      stroke: "white"
+    }
   }
 }));
