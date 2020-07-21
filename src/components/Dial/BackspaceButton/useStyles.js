@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     padding: 0,
     color: theme.color.ripple,
     borderRadius: "50%",
-    backgroundColor: "#F4F4F4 !important",
+    backgroundColor: [[theme.color.fieldBackground], "!important"],
 
     "& svg": {
       position: "relative",
@@ -18,7 +18,19 @@ export default makeStyles((theme) => ({
     },
 
     "& path": {
-      fill: theme.color.primary
+
+      "&:nth-child(1)": {
+        stroke: theme.color.primary,
+        fill: theme.color.primary,
+      },
+
+      "&:nth-child(2)": {
+        stroke: theme.color.background
+      },
+
+      "&:nth-child(3)": {
+        stroke: theme.color.background
+      }
     },
   },
 }));

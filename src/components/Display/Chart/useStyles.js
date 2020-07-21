@@ -32,7 +32,7 @@ export default makeStyles((theme) => ({
     fontSize: 40,
     fontWeight: 600,
     lineHeight: "40px",
-    color: "#242625",
+    color: theme.color.foreground,
 
     "& > span": {
       position: "relative",
@@ -48,7 +48,7 @@ export default makeStyles((theme) => ({
     fontSize: 51,
     lineHeight: "52px",
     fontWeight: 600,
-    color: "#242625",
+    color: theme.color.foreground,
 
     "& > span": {
       position: "relative",
@@ -64,14 +64,14 @@ export default makeStyles((theme) => ({
     fontSize: 20,
     lineHeight: "24px",
     fontWeight: 400,
-    color: "#B2AFAB",
+    color: theme.color.foregroundLight,
     paddingLeft: 22,
   },
   currencyCode: {
     fontSize: 25,
     lineHeight: "28px",
     fontWeight: 400,
-    color: "#242625",
+    color: theme.color.foreground,
     fontFamily: theme.font.mono
   },
   bottomSection: {

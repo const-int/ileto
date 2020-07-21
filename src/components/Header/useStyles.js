@@ -13,8 +13,11 @@ export default makeStyles((theme) => ({
   swapButton: {
     margin: [[0, 42]],
 
-    "& svg line": {
-      stroke: "white"
+    "& svg path": {
+      stroke: theme.color.background,
+      strokeWidth: 2,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
     }
   }
 }));

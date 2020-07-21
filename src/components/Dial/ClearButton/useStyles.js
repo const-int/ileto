@@ -8,16 +8,17 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     padding: 0,
-    fontSize: 25,
+    fontSize: 27,
     fontWeight: 600,
     lineHeight: "76px",
-    color: "#FFF",
+    color: theme.color.background,
     borderRadius: "50%",
     backgroundColor: theme.color.primary,
 
     "& .MuiButton-label": {
       position: "relative",
-      top: 2
+      top: 2,
+      right: 1
     }
   }
 }));

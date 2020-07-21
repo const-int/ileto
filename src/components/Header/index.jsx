@@ -4,59 +4,11 @@ import IconButton from "components/shared/IconButton";
 import CurrencyButton from "./CurrencyButton";
 
 const Arrows = () => (
-  <svg width="20" height="18" viewBox="0 0 20 18">
-    <line
-      x1="1"
-      y1="-1"
-      x2="6.37566"
-      y2="-1"
-      transform="matrix(-0.70192 0.712256 -0.70192 -0.712255 14.5659 7.43408)"
-      stroke-width="2"
-      stroke-linecap="round"
-    />
-    <line
-      x1="1"
-      y1="-1"
-      x2="6.37566"
-      y2="-1"
-      transform="matrix(-0.70192 -0.712255 -0.70192 0.712256 14.5654 18)"
-      stroke-width="2"
-      stroke-linecap="round"
-    />
-    <line
-      x1="12.3218"
-      y1="12.6587"
-      x2="18.9999"
-      y2="12.6587"
-      stroke-width="2"
-      stroke-linecap="square"
-    />
-    <line
-      x1="1"
-      y1="-1"
-      x2="6.37566"
-      y2="-1"
-      transform="matrix(0.70192 0.712255 0.70192 -0.712256 5.17432 -0.000488281)"
-      stroke-width="2"
-      stroke-linecap="round"
-    />
-    <line
-      x1="1"
-      y1="-1"
-      x2="6.37566"
-      y2="-1"
-      transform="matrix(0.70192 -0.712256 0.70192 0.712255 5.1748 10.5654)"
-      stroke-width="2"
-      stroke-linecap="round"
-    />
-    <line
-      x1="7.78564"
-      y1="5.45166"
-      x2="1.00034"
-      y2="5.45166"
-      stroke-width="2"
-      stroke-linecap="square"
-    />
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+    <path d="M6.06299 1.63672L9.88071 5.45561L6.06513 9.27665" />
+    <path d="M1.00015 5.45788L9.90567 5.45538" />
+    <path d="M13.9118 18.3636L10.0934 14.5454L13.9097 10.7251" />
+    <path d="M10.0931 14.5454L19.0003 14.5429" />
   </svg>
 );
 

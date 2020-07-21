@@ -12,13 +12,13 @@ export default makeStyles((theme) => ({
     fontWeight: 600,
     lineHeight: "76px",
     color: theme.color.ripple,
-    backgroundColor: "#F4F4F4 !important",
     borderRadius: "50%",
+    backgroundColor: [[theme.color.fieldBackground], "!important"],
 
     "& .MuiButton-label": {
       position: "relative",
       top: 2,
-      color: "#666666",
+      color: theme.color.fieldForeground,
     }
   }
 }));

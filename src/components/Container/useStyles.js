@@ -1,9 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(({ breakpoints }) => ({
+export default makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    height: "100vh"
+    height: "100vh",
+    backgroundColor: theme.color.background
   }
 }));

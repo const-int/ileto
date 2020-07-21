@@ -6,7 +6,7 @@ export default makeStyles((theme) => ({
     height: 42,
     minWidth: 42,
     padding: 0,
-    color: "#FFFFFF",
+    color: theme.color.background,
     backgroundColor: theme.color.primary,
     borderRadius: "50%",
 
