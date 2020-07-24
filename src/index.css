@@ -24,6 +24,7 @@
 :root {
   --app-height: 100vh;
   --app-top-offset: 0;
+  touch-action: manipulation;
 }
 
 body {
@@ -39,6 +40,7 @@ body {
   height: 100%;
   margin-top: var(--app-top-offset);
   overflow: hidden;
+  touch-action: manipulation;
 }
 
 *, *::after, *::before {
