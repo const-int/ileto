@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ileto/static/css/main.2437aabe.chunk.css",
+    "main.js": "/ileto/static/js/main.70cb4c4b.chunk.js",
+    "main.js.map": "/ileto/static/js/main.70cb4c4b.chunk.js.map",
+    "runtime-main.js": "/ileto/static/js/runtime-main.22004439.js",
+    "runtime-main.js.map": "/ileto/static/js/runtime-main.22004439.js.map",
+    "static/js/2.e888a3bd.chunk.js": "/ileto/static/js/2.e888a3bd.chunk.js",
+    "static/js/2.e888a3bd.chunk.js.map": "/ileto/static/js/2.e888a3bd.chunk.js.map",
+    "index.html": "/ileto/index.html",
+    "precache-manifest.7c52edfb54b619351daa249f2b15e1bb.js": "/ileto/precache-manifest.7c52edfb54b619351daa249f2b15e1bb.js",
+    "service-worker.js": "/ileto/service-worker.js",
+    "static/css/main.2437aabe.chunk.css.map": "/ileto/static/css/main.2437aabe.chunk.css.map",
+    "static/js/2.e888a3bd.chunk.js.LICENSE.txt": "/ileto/static/js/2.e888a3bd.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ileto/static/media/Lato-Semibold.bef86396.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22004439.js",
+    "static/js/2.e888a3bd.chunk.js",
+    "static/css/main.2437aabe.chunk.css",
+    "static/js/main.70cb4c4b.chunk.js"
+  ]
+}
