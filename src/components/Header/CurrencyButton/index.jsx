@@ -33,13 +33,7 @@ function CurrencyButton({ currencyLabel, onClick }) {
         fill="none"
         className={classes.arrow}
       >
-        <path
-          d="M9.48766 1.26275L5.24502 5.5054L1 1.26514"
-          stroke="#FB772F"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+        <path d="M9.48766 1.26275L5.24502 5.5054L1 1.26514" />
       </svg>
     </StyledButton>
   );

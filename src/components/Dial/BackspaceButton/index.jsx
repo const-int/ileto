@@ -14,24 +14,9 @@ function BackspaceButton({ onClick }) {
       </svg> */}
 
       <svg width="30" height="22" viewBox="0 0 30 22" fill="none">
-        <path
-          d="M25.8804 1H9.70813L1 11L9.70813 21H25.8804C26.5403 21 27.1731 20.7366 27.6397 20.2678C28.1063 19.7989 28.3684 19.163 28.3684 18.5V3.5C28.3684 2.83696 28.1063 2.20107 27.6397 1.73223C27.1731 1.26339 26.5403 1 25.8804 1V1Z"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M22.1482 7.25L14.6841 14.75"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M14.6841 7.25L22.1482 14.75"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+        <path d="M25.8804 1H9.70813L1 11L9.70813 21H25.8804C26.5403 21 27.1731 20.7366 27.6397 20.2678C28.1063 19.7989 28.3684 19.163 28.3684 18.5V3.5C28.3684 2.83696 28.1063 2.20107 27.6397 1.73223C27.1731 1.26339 26.5403 1 25.8804 1V1Z" />
+        <path d="M22.1482 7.25L14.6841 14.75" />
+        <path d="M14.6841 7.25L22.1482 14.75" />
       </svg>
     </Button>
   );

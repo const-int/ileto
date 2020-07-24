@@ -18,6 +18,9 @@ export default makeStyles((theme) => ({
     },
 
     "& path": {
+      strokeWidth: 2,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
 
       "&:nth-child(1)": {
         stroke: theme.color.primary,

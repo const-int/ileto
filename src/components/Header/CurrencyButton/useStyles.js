@@ -8,6 +8,9 @@ export default makeStyles((theme) => ({
     margin: [[8, 0, 0, 5]],
 
     "& path": {
+      strokeWidth: 2,
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
       stroke: theme.color.primary
     }
   }
