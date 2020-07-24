@@ -5,9 +5,9 @@ export default makeStyles((theme) => ({
     color: theme.color.primary
   },
   arrow: {
-    margin: [[6, 0, 0, 5]],
+    margin: [[8, 0, 0, 5]],
 
-    "& line": {
+    "& path": {
       stroke: theme.color.primary
     }
   }

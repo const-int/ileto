@@ -26,23 +26,19 @@ function CurrencyButton({ currencyLabel, onClick }) {
     <StyledButton onClick={onClick}>
       <span className={classes.currency}>{currencyLabel}</span>
 
-      <svg className={classes.arrow} width="11" height="7" viewBox="0 0 11 7">
-        <line
-          x1="1.81656"
-          y1="2"
-          x2="5.40234"
-          y2="5.58579"
+      <svg
+        width="11"
+        height="7"
+        viewBox="0 0 11 7"
+        fill="none"
+        className={classes.arrow}
+      >
+        <path
+          d="M9.48766 1.26275L5.24502 5.5054L1 1.26514"
+          stroke="#FB772F"
           stroke-width="2"
           stroke-linecap="round"
-        />
-        <line
-          x1="1"
-          y1="-1"
-          x2="6.07107"
-          y2="-1"
-          transform="matrix(-0.707107 0.707107 0.707107 0.707107 10.4023 2)"
-          stroke-width="2"
-          stroke-linecap="round"
+          stroke-linejoin="round"
         />
       </svg>
     </StyledButton>

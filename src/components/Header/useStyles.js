@@ -11,7 +11,7 @@ export default makeStyles((theme) => ({
 
   },
   swapButton: {
-    margin: [[0, 42]],
+    margin: [[0, 46]],
 
     "& svg path": {
       stroke: theme.color.background,
