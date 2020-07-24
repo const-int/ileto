@@ -28,8 +28,7 @@
 
 body {
   margin: 0;
-  height: 100vh;
-  max-height: 100vh;
+  height: var(--app-height);
   overflow: hidden;
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,9 +36,8 @@ body {
 }
 
 #root {
-  height: var(--app-height);
+  height: 100%;
   margin-top: var(--app-top-offset);
-  max-height: 100vh;
   overflow: auto;
 }
 
