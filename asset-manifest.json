@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ileto/static/css/main.43cd1c70.chunk.css",
+    "main.css": "/ileto/static/css/main.772d600e.chunk.css",
     "main.js": "/ileto/static/js/main.6f106b65.chunk.js",
     "main.js.map": "/ileto/static/js/main.6f106b65.chunk.js.map",
     "runtime-main.js": "/ileto/static/js/runtime-main.22004439.js",
@@ -8,16 +8,16 @@
     "static/js/2.e888a3bd.chunk.js": "/ileto/static/js/2.e888a3bd.chunk.js",
     "static/js/2.e888a3bd.chunk.js.map": "/ileto/static/js/2.e888a3bd.chunk.js.map",
     "index.html": "/ileto/index.html",
-    "precache-manifest.33dfab906e8814ec5df10fdfb5adbc23.js": "/ileto/precache-manifest.33dfab906e8814ec5df10fdfb5adbc23.js",
+    "precache-manifest.d7e29bb050c29c27003cd03cc58baa85.js": "/ileto/precache-manifest.d7e29bb050c29c27003cd03cc58baa85.js",
     "service-worker.js": "/ileto/service-worker.js",
-    "static/css/main.43cd1c70.chunk.css.map": "/ileto/static/css/main.43cd1c70.chunk.css.map",
+    "static/css/main.772d600e.chunk.css.map": "/ileto/static/css/main.772d600e.chunk.css.map",
     "static/js/2.e888a3bd.chunk.js.LICENSE.txt": "/ileto/static/js/2.e888a3bd.chunk.js.LICENSE.txt",
     "static/media/index.css": "/ileto/static/media/Lato-Semibold.bef86396.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.22004439.js",
     "static/js/2.e888a3bd.chunk.js",
-    "static/css/main.43cd1c70.chunk.css",
+    "static/css/main.772d600e.chunk.css",
     "static/js/main.6f106b65.chunk.js"
   ]
 }
