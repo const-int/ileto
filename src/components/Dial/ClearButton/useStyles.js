@@ -14,6 +14,7 @@ export default makeStyles((theme) => ({
     color: theme.color.background,
     borderRadius: "50%",
     backgroundColor: theme.color.primary,
+    pointerEvents: "all",
 
     "& .MuiButton-label": {
       position: "relative",

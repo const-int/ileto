@@ -16,6 +16,7 @@ const StyledButton = withStyles((theme) => ({
     border: 0,
     color: theme.color.ripple,
     backgroundColor: "transparent",
+    pointerEvents: "all",
   },
 }))(MuiButton);
 

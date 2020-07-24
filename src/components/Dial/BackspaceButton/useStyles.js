@@ -11,6 +11,7 @@ export default makeStyles((theme) => ({
     color: theme.color.ripple,
     borderRadius: "50%",
     backgroundColor: [[theme.color.fieldBackground], "!important"],
+    pointerEvents: "all",
 
     "& svg": {
       position: "relative",

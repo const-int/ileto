@@ -9,6 +9,7 @@ export default makeStyles((theme) => ({
     color: theme.color.background,
     backgroundColor: theme.color.primary,
     borderRadius: "50%",
+    pointerEvents: "all",
 
     "&:hover": {
       backgroundColor: theme.color.primary,
