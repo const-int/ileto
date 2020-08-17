@@ -17,5 +17,12 @@ export default makeStyles((theme) => ({
     height: "100%",
     width: "100%",
     color: theme.color.fieldForeground,
+  },
+  dotContainer: {
+    width: 8,
+    height: 20,
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "flex-end",
   }
 }));

@@ -1,5 +1,4 @@
 import React from "react";
-import classnames from "classnames";
 // import PropTypes from "prop-types";
 import useStyles from "./useStyles";
 
@@ -8,36 +7,26 @@ function Chart() {
 
   return (
     <div className={classes.root}>
-      <div className={classes.container}>
-        <div className={classes.descriptionSection}>
-          <div className={classes.currencyDescription}>
-            <div className={classes.currencyShortName}>dollar</div>
-            <div className={classes.currencyCode}>USD</div>
-          </div>
-
-          <div
-            className={classnames(
-              classes.currencyDescription,
-              classes.bottomSection
-            )}
-          >
-            <div className={classes.currencyShortName}>ruble</div>
-            <div className={classes.currencyCode}>RUB</div>
-          </div>
+      <div className={classes.source}>
+        <div className={classes.sourceLabels}>
+          <div className={classes.sourceCurrencyCode}>RUB</div>
+          <div className={classes.sourceCurrencyName}>Russian Ruble</div>
         </div>
 
-        <div className={classes.valuesSection}>
-          <div className={classes.sourceCurrencyValue}>
-            <span>13</span>
-          </div>
-          <div
-            className={classnames(
-              classes.targetCurrencyValue,
-              classes.bottomSection
-            )}
-          >
-            <span>230</span>
-          </div>
+        <div className={classes.sourceValueContainer}>
+          <div className={classes.sourceValue}>4,835</div>
+          <div className={classes.sourceCursor} />
+        </div>
+      </div>
+
+      <div className={classes.target}>
+        <div className={classes.targetLabels}>
+          <div className={classes.targetCurrencyCode}>USD</div>
+          <div className={classes.targetCurrencyName}>U.S. Dollar</div>
+        </div>
+
+        <div className={classes.targetValueContainer}>
+          <div className={classes.targetValue}>172</div>
         </div>
       </div>
     </div>

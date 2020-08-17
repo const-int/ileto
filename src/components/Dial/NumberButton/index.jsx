@@ -7,7 +7,11 @@ function NumberButton({ label, onClick }) {
   const classes = useStyles();
 
   return (
-    <Button className={classes.root} onClick={onClick}>
+    <Button
+      className={classes.root}
+      onClick={onClick}
+      classes={{ label: classes.label }}
+    >
       {label}
     </Button>
   );

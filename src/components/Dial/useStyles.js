@@ -4,12 +4,19 @@ export default makeStyles(({ breakpoints }) => ({
   root: {
     display: "flex",
     justifyContent: "center",
+    marginTop: 30
   },
   grid: {
+    width: "100%",
+    maxWidth: 360,
     display: "grid",
-    gridTemplateColumns: "1fr 1fr 1fr",
-    gridGap: "16px 26px",
-    padding: [[22, 0]],
-    width: 280,
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateRows: "repeat(4, 60px)",
+
+    "& > div": {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    }
   }
 }));

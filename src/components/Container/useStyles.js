@@ -4,6 +4,9 @@ export default makeStyles((theme) => ({
   root: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: theme.color.background
+    justifyContent: "space-between",
+    height: "100%",
+    backgroundColor: theme.color.background,
+    paddingBottom: 20
   }
 }));

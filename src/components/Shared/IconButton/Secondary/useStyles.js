@@ -2,13 +2,15 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
-    width: 60,
-    height: 60,
-    minWidth: 60,
+    width: 40,
+    height: 40,
+    minWidth: [[40], "!important"],
     padding: 0,
-    color: theme.color.ripple,
-    borderRadius: "50%",
+    color: [[theme.color.fieldForeground], "!important"],
+    backgroundColor: theme.color.fieldBackground,
+    borderRadius: [["50%"], "!important"],
     pointerEvents: "all",
+    zIndex: 20
   },
   label: {
     display: "flex",
