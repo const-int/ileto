@@ -1,6 +1,11 @@
 import React from "react";
-// import PropTypes from "prop-types";
 import useStyles from "./useStyles";
+
+const TriangleIcon = () => (
+  <svg width="10" height="5" viewBox="0 0 10 5" fill="none">
+    <path d="M10 0H0L5 5L10 0Z" />
+  </svg>
+);
 
 function Chart() {
   const classes = useStyles();
@@ -9,8 +14,12 @@ function Chart() {
     <div className={classes.root}>
       <div className={classes.source}>
         <div className={classes.sourceLabels}>
-          <div className={classes.sourceCurrencyCode}>RUB</div>
-          <div className={classes.sourceCurrencyName}>Russian Ruble</div>
+          <div className={classes.currencyCode}>
+            <span>RUB</span>
+
+            <TriangleIcon />
+          </div>
+          <div className={classes.currencyName}>Russian Ruble</div>
         </div>
 
         <div className={classes.sourceValueContainer}>
@@ -21,8 +30,12 @@ function Chart() {
 
       <div className={classes.target}>
         <div className={classes.targetLabels}>
-          <div className={classes.targetCurrencyCode}>USD</div>
-          <div className={classes.targetCurrencyName}>U.S. Dollar</div>
+          <div className={classes.currencyCode}>
+            <span>USD</span>
+
+            <TriangleIcon />
+          </div>
+          <div className={classes.currencyName}>U.S. Dollar</div>
         </div>
 
         <div className={classes.targetValueContainer}>

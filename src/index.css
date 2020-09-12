@@ -46,3 +46,12 @@ body {
 *, *::after, *::before {
   box-sizing: border-box;
 }
+
+@keyframes cursorBlink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #FB772F;
+  }
+}
