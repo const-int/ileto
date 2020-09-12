@@ -7,6 +7,5 @@ export default makeStyles((theme) => ({
     justifyContent: "space-between",
     height: "100%",
     backgroundColor: theme.color.background,
-    paddingBottom: 20
   }
 }));

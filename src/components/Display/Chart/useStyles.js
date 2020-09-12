@@ -7,6 +7,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     flexDirection: "column",
     width: 270,
+    userSelect: "none"
   },
   source: {
     display: "flex",
@@ -15,11 +16,31 @@ export default makeStyles((theme) => ({
     width: "100%"
   },
   currencyCode: {
-    display: "flex",
+    position: "relative",
+    display: "inline-flex",
     alignItems: "center",
     fontSize: 24,
     fontWeight: 600,
     lineHeight: "30px",
+    cursor: "pointer",
+    WebkitTapHighlightColor: "transparent",
+
+    "&::after": {
+      content: "''",
+      position: "absolute",
+      top: -4,
+      right: -8,
+      bottom: 0,
+      left: -8,
+      backgroundColor: "rgba(0, 0, 0, 0.04)",
+      borderRadius: 4,
+      opacity: 0,
+      transition: "opacity .2s ease"
+    },
+
+    "&:active::after": {
+      opacity: 1,
+    },
 
     "& > span": {
       color: theme.color.primary
