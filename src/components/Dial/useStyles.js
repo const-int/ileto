@@ -5,7 +5,8 @@ export default makeStyles(({ breakpoints }) => ({
     display: "flex",
     justifyContent: "center",
     marginTop: 30,
-    paddingBottom: 40
+    paddingBottom: 40,
+    flexShrink: 0
   },
   grid: {
     width: "100%",
