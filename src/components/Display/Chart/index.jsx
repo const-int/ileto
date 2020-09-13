@@ -13,7 +13,7 @@ function Chart() {
   return (
     <div className={classes.root}>
       <div className={classes.source}>
-        <div className={classes.sourceLabels}>
+        <div className={classes.currencyLabel}>
           <div className={classes.currencyCode}>
             <span>RUB</span>
 
@@ -29,7 +29,7 @@ function Chart() {
       </div>
 
       <div className={classes.target}>
-        <div className={classes.targetLabels}>
+        <div className={classes.currencyLabel}>
           <div className={classes.currencyCode}>
             <span>USD</span>
 

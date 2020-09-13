@@ -15,22 +15,16 @@ export default makeStyles((theme) => ({
     flexWrap: "nowrap",
     width: "100%"
   },
-  currencyCode: {
+  currencyLabel: {
     position: "relative",
-    display: "inline-flex",
-    alignItems: "center",
-    fontSize: 24,
-    fontWeight: 600,
-    lineHeight: "30px",
-    cursor: "pointer",
-    WebkitTapHighlightColor: "transparent",
+    pointerEvents: "all",
 
     "&::after": {
       content: "''",
       position: "absolute",
       top: -4,
       right: -8,
-      bottom: 0,
+      bottom: -4,
       left: -8,
       backgroundColor: "rgba(0, 0, 0, 0.04)",
       borderRadius: 4,
@@ -41,6 +35,16 @@ export default makeStyles((theme) => ({
     "&:active::after": {
       opacity: 1,
     },
+  },
+  currencyCode: {
+    position: "relative",
+    display: "inline-flex",
+    alignItems: "center",
+    fontSize: 24,
+    fontWeight: 600,
+    lineHeight: "30px",
+    cursor: "pointer",
+    WebkitTapHighlightColor: "transparent",
 
     "& > span": {
       color: theme.color.primary
