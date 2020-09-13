@@ -95,7 +95,7 @@ export default makeStyles((theme) => ({
     lineHeight: "42px",
   },
   sourceCursor: {
-    width: 1,
+    width: 2,
     height: 32,
     backgroundColor: theme.color.primary,
     marginLeft: 3,

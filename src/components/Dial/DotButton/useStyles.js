@@ -2,12 +2,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
-    width: 60,
     height: 60,
     minWidth: 60,
     padding: 0,
     color: theme.color.ripple,
-    borderRadius: "50%",
+    borderRadius: 4,
     pointerEvents: "all",
   },
   label: {

@@ -1,6 +1,5 @@
 import React from "react";
 import NumberButton from "components/Dial/NumberButton";
-import IconButton from "components/Shared/IconButton/Primary";
 import DotButton from "components/Dial/DotButton";
 import useStyles from "components/Dial/useStyles";
 import Icon1Svg from "./img/1.svg";
@@ -14,6 +13,7 @@ import Icon8Svg from "./img/8.svg";
 import Icon9Svg from "./img/9.svg";
 import Icon0Svg from "./img/0.svg";
 import IconCSvg from "./img/c.svg";
+import ClearButton from "./ClearButton";
 
 function Dial() {
   const classes = useStyles();
@@ -21,92 +21,59 @@ function Dial() {
   return (
     <div className={classes.root}>
       <div className={classes.grid}>
-        <div>
-          <NumberButton
-            label={<img src={Icon1Svg} alt="Icon 1" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon1Svg} alt="Icon 1" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon2Svg} alt="Icon 2" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon2Svg} alt="Icon 2" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon3Svg} alt="Icon 3" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon3Svg} alt="Icon 3" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon4Svg} alt="Icon 4" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon4Svg} alt="Icon 4" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon5Svg} alt="Icon 5" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon5Svg} alt="Icon 5" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon6Svg} alt="Icon 6" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon6Svg} alt="Icon 6" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon7Svg} alt="Icon 7" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon7Svg} alt="Icon 7" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon8Svg} alt="Icon 8" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon8Svg} alt="Icon 8" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon9Svg} alt="Icon 9" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon9Svg} alt="Icon 9" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <DotButton onClick={() => {}} />
-        </div>
+        <DotButton onClick={() => {}} />
 
-        <div>
-          <NumberButton
-            label={<img src={Icon0Svg} alt="Icon 0" />}
-            onClick={() => {}}
-          />
-        </div>
+        <NumberButton
+          label={<img src={Icon0Svg} alt="Icon 0" />}
+          onClick={() => {}}
+        />
 
-        <div>
-          <IconButton
-            onClick={() => {}}
-            icon={
-              <img
-                src={IconCSvg}
-                alt="Icon clear"
-                style={{ width: 15, height: 18, marginRight: 1 }}
-              />
-            }
-          />
-        </div>
+        <ClearButton onClick={() => {}} />
       </div>
     </div>
   );

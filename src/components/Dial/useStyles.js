@@ -4,8 +4,7 @@ export default makeStyles(({ breakpoints }) => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    marginTop: 30,
-    paddingBottom: 40,
+    padding: [[40, 0]],
     flexShrink: 0
   },
   grid: {
@@ -15,7 +14,7 @@ export default makeStyles(({ breakpoints }) => ({
     gridTemplateColumns: "repeat(3, 1fr)",
     gridTemplateRows: "repeat(4, 60px)",
 
-    "& > div": {
+    "& > button": {
       display: "flex",
       justifyContent: "center",
       alignItems: "center"
