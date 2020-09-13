@@ -92,9 +92,10 @@ export default makeStyles((theme) => ({
   },
   sourceCursor: {
     width: 1,
-    height: 34,
+    height: 32,
     backgroundColor: theme.color.primary,
     marginLeft: 3,
+    marginTop: 3,
     animation: "1s cursorBlink step-end infinite"
   }
 }));
