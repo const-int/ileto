@@ -8,6 +8,7 @@ export default makeStyles((theme) => ({
     color: theme.color.ripple,
     borderRadius: 4,
     pointerEvents: "all",
+    touchAction: "manipulation"
   },
   label: {
     display: "flex",
