@@ -69,7 +69,7 @@ export default makeStyles((theme) => ({
   },
   sourceValueContainer: {
     display: "flex",
-    height: 43,
+    height: 44,
     width: "50%",
     borderBottomWidth: 2,
     borderBottomStyle: "solid",
@@ -77,10 +77,10 @@ export default makeStyles((theme) => ({
     color: theme.color.foreground,
     fontSize: 28,
     fontWeight: 600,
-    lineHeight: "34px",
+    lineHeight: "42px",
   },
   targetValueContainer: {
-    height: 43,
+    height: 44,
     width: "50%",
     borderBottomWidth: 2,
     borderBottomStyle: "solid",
@@ -88,13 +88,13 @@ export default makeStyles((theme) => ({
     color: theme.color.foreground,
     fontSize: 28,
     fontWeight: 600,
-    lineHeight: "34px",
+    lineHeight: "42px",
   },
   sourceCursor: {
     width: 1,
     height: 34,
     backgroundColor: theme.color.primary,
-    margin: [[-3, 0, 0, 3]],
+    marginLeft: 3,
     animation: "1s cursorBlink step-end infinite"
   }
 }));
