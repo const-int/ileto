@@ -32,7 +32,7 @@ body {
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  touch-action: none;
+  touch-action: manipulation;
   pointer-events: none;
 }
 
