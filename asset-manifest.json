@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/ileto/static/css/main.647017ec.chunk.css",
-    "main.js": "/ileto/static/js/main.7b939df3.chunk.js",
-    "main.js.map": "/ileto/static/js/main.7b939df3.chunk.js.map",
+    "main.js": "/ileto/static/js/main.4ca3bce7.chunk.js",
+    "main.js.map": "/ileto/static/js/main.4ca3bce7.chunk.js.map",
     "runtime-main.js": "/ileto/static/js/runtime-main.22004439.js",
     "runtime-main.js.map": "/ileto/static/js/runtime-main.22004439.js.map",
-    "static/js/2.9669d5f0.chunk.js": "/ileto/static/js/2.9669d5f0.chunk.js",
-    "static/js/2.9669d5f0.chunk.js.map": "/ileto/static/js/2.9669d5f0.chunk.js.map",
+    "static/js/2.a566453e.chunk.js": "/ileto/static/js/2.a566453e.chunk.js",
+    "static/js/2.a566453e.chunk.js.map": "/ileto/static/js/2.a566453e.chunk.js.map",
     "index.html": "/ileto/index.html",
-    "precache-manifest.fe775425ba4196f52ccb47531b703415.js": "/ileto/precache-manifest.fe775425ba4196f52ccb47531b703415.js",
+    "precache-manifest.5c95f1d716bc740acc0b63b11d3db063.js": "/ileto/precache-manifest.5c95f1d716bc740acc0b63b11d3db063.js",
     "service-worker.js": "/ileto/service-worker.js",
     "static/css/main.647017ec.chunk.css.map": "/ileto/static/css/main.647017ec.chunk.css.map",
-    "static/js/2.9669d5f0.chunk.js.LICENSE.txt": "/ileto/static/js/2.9669d5f0.chunk.js.LICENSE.txt",
+    "static/js/2.a566453e.chunk.js.LICENSE.txt": "/ileto/static/js/2.a566453e.chunk.js.LICENSE.txt",
     "static/media/0.svg": "/ileto/static/media/0.cc817843.svg",
     "static/media/1.svg": "/ileto/static/media/1.55fb78ec.svg",
     "static/media/2.svg": "/ileto/static/media/2.c790b928.svg",
@@ -23,13 +23,12 @@
     "static/media/8.svg": "/ileto/static/media/8.229c1fd1.svg",
     "static/media/9.svg": "/ileto/static/media/9.933e4ebc.svg",
     "static/media/index.css": "/ileto/static/media/Lato-Semibold.bef86396.woff",
-    "static/media/arrows.svg": "/ileto/static/media/arrows.6a40b773.svg",
-    "static/media/c.svg": "/ileto/static/media/c.a57b832b.svg"
+    "static/media/arrows.svg": "/ileto/static/media/arrows.6a40b773.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.22004439.js",
-    "static/js/2.9669d5f0.chunk.js",
+    "static/js/2.a566453e.chunk.js",
     "static/css/main.647017ec.chunk.css",
-    "static/js/main.7b939df3.chunk.js"
+    "static/js/main.4ca3bce7.chunk.js"
   ]
 }

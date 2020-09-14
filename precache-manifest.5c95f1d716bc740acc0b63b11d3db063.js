@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "baa7e97380d46c9cb755d0b539ba0a1e",
+    "revision": "dc8fc262fdf4fd7538b2b984ae36e99f",
     "url": "/ileto/index.html"
   },
   {
-    "revision": "6eb5424483051587eb06",
+    "revision": "86f3eade25bf5a94f38e",
     "url": "/ileto/static/css/main.647017ec.chunk.css"
   },
   {
-    "revision": "3bc198d6ffad34786e4e",
-    "url": "/ileto/static/js/2.9669d5f0.chunk.js"
+    "revision": "312f451d38445d1e1c45",
+    "url": "/ileto/static/js/2.a566453e.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/ileto/static/js/2.9669d5f0.chunk.js.LICENSE.txt"
+    "url": "/ileto/static/js/2.a566453e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6eb5424483051587eb06",
-    "url": "/ileto/static/js/main.7b939df3.chunk.js"
+    "revision": "86f3eade25bf5a94f38e",
+    "url": "/ileto/static/js/main.4ca3bce7.chunk.js"
   },
   {
     "revision": "1c3f22b39fff0ed1e3a1",
@@ -78,9 +78,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6a40b773b1a33f78f34681a3f7162eb0",
     "url": "/ileto/static/media/arrows.6a40b773.svg"
-  },
-  {
-    "revision": "a57b832bbd0f8ba6d7dd32ac7d261a26",
-    "url": "/ileto/static/media/c.a57b832b.svg"
   }
 ]);
