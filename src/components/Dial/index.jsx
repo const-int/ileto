@@ -12,7 +12,6 @@ import Icon7Svg from "./img/7.svg";
 import Icon8Svg from "./img/8.svg";
 import Icon9Svg from "./img/9.svg";
 import Icon0Svg from "./img/0.svg";
-import IconCSvg from "./img/c.svg";
 import ClearButton from "./ClearButton";
 
 function Dial() {

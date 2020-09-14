@@ -8,14 +8,21 @@ export default makeStyles((theme) => ({
     color: theme.color.ripple,
     borderRadius: 4,
     pointerEvents: "all",
-    touchAction: "manipulation"
+    touchAction: "manipulation",
+
+    "&:active $label": {
+      backgroundColor: "#dad7d4"
+    }
   },
   label: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "100%",
-    width: "100%",
+    height: 60,
+    width: 60,
+    borderRadius: "50%",
     color: theme.color.fieldForeground,
+    transition: "background .15s ease",
+    backgroundColor: "transparent",
   }
 }));

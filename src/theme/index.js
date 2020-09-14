@@ -1,6 +1,11 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const Theme = createMuiTheme({
+  props: {
+    MuiButtonBase: {
+      disableRipple: true
+    },
+  },
   typography: {
     fontFamily: [
       'Lato',
@@ -19,7 +24,7 @@ const Theme = createMuiTheme({
     fieldBackground: "#F4F4F4",
     fieldForeground: "#666666",
     ripple: "#BBBBBB",
-  }
+  },
 });
 
 export default Theme;
