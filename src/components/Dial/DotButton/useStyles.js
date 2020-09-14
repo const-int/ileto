@@ -18,7 +18,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "100%",
+    height: 60,
     width: 60,
     transition: "background .15s ease",
     backgroundColor: "transparent",
