@@ -7,7 +7,11 @@ function BackspaceButton({ onClick }) {
   const classes = useStyles();
 
   return (
-    <Button onClick={onClick} className={classes.root}>
+    <Button
+      onClick={onClick}
+      className={classes.root}
+      classes={{ label: classes.label }}
+    >
       <span className={classes.dotContainer}>
         <svg
           width="5"

@@ -26,7 +26,7 @@ export default makeStyles((theme) => ({
       right: -8,
       bottom: -4,
       left: -8,
-      backgroundColor: "rgba(0, 0, 0, 0.04)",
+      backgroundColor: "#dad7d4",
       borderRadius: 4,
       opacity: 0,
       transition: "opacity .2s ease"
@@ -45,6 +45,7 @@ export default makeStyles((theme) => ({
     lineHeight: "30px",
     cursor: "pointer",
     WebkitTapHighlightColor: "transparent",
+    zIndex: 2,
 
     "& > span": {
       color: theme.color.primary
@@ -59,10 +60,12 @@ export default makeStyles((theme) => ({
     }
   },
   currencyName: {
+    position: "relative",
     fontSize: 14,
     fontWeight: 600,
     lineHeight: "20px",
-    color: theme.color.foregroundLight
+    color: theme.color.foregroundLight,
+    zIndex: 2,
   },
   target: {
     display: "flex",

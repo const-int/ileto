@@ -10,7 +10,13 @@ export default makeStyles((theme) => ({
     backgroundColor: theme.color.fieldBackground,
     borderRadius: [["50%"], "!important"],
     pointerEvents: "all",
-    zIndex: 20
+    touchAction: "manipulation",
+    transition: "background .15s ease",
+    zIndex: 20,
+
+    "&:active": {
+      backgroundColor: "#dad7d4"
+    }
   },
   label: {
     display: "flex",

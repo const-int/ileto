@@ -10,6 +10,7 @@ export default makeStyles((theme) => ({
   icon: {
     width: 16,
     height: 20,
+    transition: "background .15s ease",
   },
   line: {
     position: "absolute",
