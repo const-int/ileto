@@ -21,9 +21,12 @@
   font-style: normal;
 }
 
-:root {
+html {
   --app-height: 100vh;
   --app-top-offset: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
