@@ -15,13 +15,13 @@ export default makeStyles((theme) => ({
     },
 
     "@media(max-height: 650px)": {
-      gridGap: 40,
-      padding: [[40, 0]],
+      gridGap: 35,
+      padding: [[35, 0]],
     },
 
     "@media(max-height: 560px)": {
-      gridGap: 30,
-      padding: [[30, 0]],
+      gridGap: 28,
+      padding: [[28, 0]],
     },
   }
 }));
