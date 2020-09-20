@@ -4,15 +4,6 @@ export default makeStyles(() => ({
   root: {
     display: "flex",
     justifyContent: "center",
-
-    // "@media(min-height: 650px)": {
-    // },
-
-    // "@media(min-height: 700px)": {
-    // },
-
-    // "@media(min-height: 750px)": {
-    // }
   },
   grid: {
     width: "100%",

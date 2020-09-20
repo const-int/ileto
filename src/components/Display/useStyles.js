@@ -5,6 +5,6 @@ export default makeStyles(() => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: [[10, 0, 18]]
+    padding: [[15, 0, 18]]
   }
 }));
