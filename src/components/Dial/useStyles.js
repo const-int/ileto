@@ -1,10 +1,22 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(({ breakpoints }) => ({
+export default makeStyles(() => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    padding: [[60, 0, 0]],
+    paddingTop: 25,
+
+    "@media(min-height: 650px)": {
+      paddingTop: 40
+    },
+
+    "@media(min-height: 700px)": {
+      paddingTop: 50
+    },
+
+    "@media(min-height: 750px)": {
+      paddingTop: 60
+    }
   },
   grid: {
     width: "100%",
