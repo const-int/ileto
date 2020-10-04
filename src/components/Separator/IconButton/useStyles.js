@@ -15,6 +15,10 @@ export default makeStyles((theme) => ({
     transition: "background .15s ease",
     zIndex: 20,
 
+    "&:hover": {
+      backgroundColor: theme.color.fieldBackground,
+    },
+
     "&:active": {
       backgroundColor: "#dad7d4",
 

@@ -10,6 +10,10 @@ export default makeStyles((theme) => ({
     pointerEvents: "all",
     touchAction: "manipulation",
 
+    "&:hover": {
+      backgroundColor: theme.color.background
+    },
+
     "&:active $label": {
       backgroundColor: "#dad7d4"
     }

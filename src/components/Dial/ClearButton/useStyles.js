@@ -8,6 +8,10 @@ export default makeStyles((theme) => ({
     zIndex: 20,
     touchAction: "manipulation",
 
+    "&:hover": {
+      backgroundColor: theme.color.background
+    },
+
     "&:active": {
       "& $label": {
         backgroundColor: "#dad7d4"

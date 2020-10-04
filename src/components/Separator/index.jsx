@@ -1,6 +1,6 @@
 import React from "react";
 import useStyles from "components/Separator/useStyles";
-import IconButton from "components/Shared/IconButton/Secondary";
+import IconButton from "./IconButton";
 import ArrowsSvg from "./img/arrows.svg";
 
 function Separator() {
