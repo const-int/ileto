@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import StringUtils from "utils/StringUtils";
 import useStyles from "./useStyles";
+import ValueContext from "context/ValueContext";
+import CurrencyContext from "context/CurrencyContext";
 
 const TriangleIcon = () => (
   <svg width="10" height="5" viewBox="0 0 10 5" fill="none">
@@ -9,21 +12,26 @@ const TriangleIcon = () => (
 
 function Chart() {
   const classes = useStyles();
+  const { formatCurrencyValue } = StringUtils;
+  const { value } = useContext(ValueContext);
+  const { sourceCurrency, targerCurrency } = useContext(CurrencyContext);
 
   return (
     <div className={classes.root}>
       <div className={classes.source}>
         <div className={classes.currencyLabel}>
           <div className={classes.currencyCode}>
-            <span>RUB</span>
+            <span>{sourceCurrency.code}</span>
 
             <TriangleIcon />
           </div>
-          <div className={classes.currencyName}>Russian Ruble</div>
+          <div className={classes.currencyName}>{sourceCurrency.name}</div>
         </div>
 
         <div className={classes.sourceValueContainer}>
-          <div className={classes.sourceValue}>4,835</div>
+          <div className={classes.sourceValue}>
+            {formatCurrencyValue(value)}
+          </div>
           <div className={classes.sourceCursor} />
         </div>
       </div>
@@ -31,11 +39,11 @@ function Chart() {
       <div className={classes.target}>
         <div className={classes.currencyLabel}>
           <div className={classes.currencyCode}>
-            <span>USD</span>
+            <span>{targerCurrency.code}</span>
 
             <TriangleIcon />
           </div>
-          <div className={classes.currencyName}>U.S. Dollar</div>
+          <div className={classes.currencyName}>{targerCurrency.name}</div>
         </div>
 
         <div className={classes.targetValueContainer}>
@@ -45,7 +53,5 @@ function Chart() {
     </div>
   );
 }
-
-// Chart.propTypes = {};
 
 export default Chart;

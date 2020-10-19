@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import ThemeProvider from 'providers/ThemeProvider';
+import { ValueContextProvider } from "context/ValueContext";
+import { CurrencyContextProvider } from "context/CurrencyContext";
 import Container from "components/Container";
 import Separator from "components/Separator";
 import Display from 'components/Display';
@@ -27,11 +29,15 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Container>
-        <Display />
-        <Separator />
-        <Dial />
-      </Container>
+        <Container>
+          <CurrencyContextProvider>
+            <ValueContextProvider>
+              <Display />
+              <Separator />
+              <Dial />
+            </ValueContextProvider>
+          </CurrencyContextProvider>
+        </Container>
     </ThemeProvider>
   );
 }
