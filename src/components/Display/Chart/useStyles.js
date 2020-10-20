@@ -86,7 +86,11 @@ export default makeStyles((theme) => ({
     fontWeight: 600,
     lineHeight: "42px",
   },
+  sourceValue: {
+    fontSize: ({sourceValueFontSize}) =>  sourceValueFontSize
+  },
   targetValueContainer: {
+    display: "flex",
     height: 44,
     width: "50%",
     borderBottomWidth: 2,
@@ -96,6 +100,9 @@ export default makeStyles((theme) => ({
     fontSize: 28,
     fontWeight: 600,
     lineHeight: "42px",
+  },
+  targetValue: {
+    fontSize: ({targetValueFontSize}) =>  targetValueFontSize
   },
   sourceCursor: {
     width: 2,

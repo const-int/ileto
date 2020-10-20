@@ -68,9 +68,9 @@ function Dial() {
       <div className={classes.grid}>
         {new Array(9).fill(0).map((v, index) => (
           <NumberButton
-            label={<img src={digitMap[index]} alt={`Icon ${index}`} />}
-            onClick={() => handleDigitButtonClick(index)}
-            key={index}
+            label={<img src={digitMap[index + 1]} alt={`Icon ${index + 1}`} />}
+            onClick={() => handleDigitButtonClick(index + 1)}
+            key={index + 1}
           />
         ))}
 

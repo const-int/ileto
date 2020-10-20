@@ -12,17 +12,35 @@ const RUB = {
 };
 
 function CurrencyContextProvider({ children }) {
-  const [sourceCurrency, setSourceCurrency] = useState({code: "RUB"});
-  const [targerCurrency, setTargerCurrency] = useState({code: "USD"});
+  const API_URL = 'https://api.exchangeratesapi.io/latest';
+
+  const [sourceCurrency, setSourceCurrency] = useState(USD);
+  const [targerCurrency, setTargerCurrency] = useState(RUB);
+  const [exchangeRate, setExchangeRate] = useState(1);
+
+  function exchange(value) {
+    const result = value * exchangeRate;
+
+    return `${result.toFixed(result > 999 ? 0 : 2)}`;
+  }
+
+  async function getExchangeRate(source, target) {
+    fetch(`${API_URL}?base=${source.code}&symbols=${target.code}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data && data.rates && data.rates[target.code]) {
+        setExchangeRate(data.rates[target.code])
+      }
+    });
+  }
 
   useEffect(() => {
-    setSourceCurrency(USD);
-    setTargerCurrency(RUB);
-  }, [])
+    getExchangeRate(sourceCurrency, targerCurrency)
+  }, [sourceCurrency, targerCurrency])
 
   return (
     <CurrencyContext.Provider
-      value={{ targerCurrency, sourceCurrency }}
+      value={{ targerCurrency, sourceCurrency, exchange }}
     >
       {children}
     </CurrencyContext.Provider>

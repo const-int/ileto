@@ -1,20 +1,25 @@
-import React, { useContext } from "react";
-import StringUtils from "utils/StringUtils";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useRef } from "react";
+import useFontSize from "./useFontSize";
 import useStyles from "./useStyles";
-import ValueContext from "context/ValueContext";
-import CurrencyContext from "context/CurrencyContext";
+import TriangleIcon from "./TriangleIcon";
 
-const TriangleIcon = () => (
-  <svg width="10" height="5" viewBox="0 0 10 5" fill="none">
-    <path d="M10 0H0L5 5L10 0Z" />
-  </svg>
-);
-
-function Chart() {
-  const classes = useStyles();
-  const { formatCurrencyValue } = StringUtils;
-  const { value } = useContext(ValueContext);
-  const { sourceCurrency, targerCurrency } = useContext(CurrencyContext);
+function Chart({ sourceCurrency, targerCurrency, sourceValue, targetValue }) {
+  const sourceValueContainerEl = useRef(null);
+  const sourceValueEl = useRef(null);
+  const sourceValueFontSize = useFontSize(
+    sourceValue,
+    sourceValueEl,
+    sourceValueContainerEl
+  );
+  const targetValueContainerEl = useRef(null);
+  const targetValueEl = useRef(null);
+  const targetValueFontSize = useFontSize(
+    targetValue,
+    targetValueEl,
+    targetValueContainerEl
+  );
+  const classes = useStyles({ sourceValueFontSize, targetValueFontSize });
 
   return (
     <div className={classes.root}>
@@ -28,9 +33,12 @@ function Chart() {
           <div className={classes.currencyName}>{sourceCurrency.name}</div>
         </div>
 
-        <div className={classes.sourceValueContainer}>
-          <div className={classes.sourceValue}>
-            {formatCurrencyValue(value)}
+        <div
+          ref={sourceValueContainerEl}
+          className={classes.sourceValueContainer}
+        >
+          <div ref={sourceValueEl} className={classes.sourceValue}>
+            {sourceValue}
           </div>
           <div className={classes.sourceCursor} />
         </div>
@@ -46,8 +54,13 @@ function Chart() {
           <div className={classes.currencyName}>{targerCurrency.name}</div>
         </div>
 
-        <div className={classes.targetValueContainer}>
-          <div className={classes.targetValue}>172</div>
+        <div
+          ref={targetValueContainerEl}
+          className={classes.targetValueContainer}
+        >
+          <div ref={targetValueEl} className={classes.targetValue}>
+            {targetValue}
+          </div>
         </div>
       </div>
     </div>
