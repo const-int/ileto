@@ -4,7 +4,7 @@ import useFontSize from "./useFontSize";
 import useStyles from "./useStyles";
 import TriangleIcon from "./TriangleIcon";
 
-function Chart({ sourceCurrency, targerCurrency, sourceValue, targetValue }) {
+function Chart({ sourceCurrency, targetCurrency, sourceValue, targetValue }) {
   const sourceValueContainerEl = useRef(null);
   const sourceValueEl = useRef(null);
   const sourceValueFontSize = useFontSize(
@@ -30,7 +30,9 @@ function Chart({ sourceCurrency, targerCurrency, sourceValue, targetValue }) {
 
             <TriangleIcon />
           </div>
-          <div className={classes.currencyName}>{sourceCurrency.name}</div>
+          <div className={classes.currencyName}>
+            {sourceCurrency.shortName || sourceCurrency.name}
+          </div>
         </div>
 
         <div
@@ -47,11 +49,13 @@ function Chart({ sourceCurrency, targerCurrency, sourceValue, targetValue }) {
       <div className={classes.target}>
         <div className={classes.currencyLabel}>
           <div className={classes.currencyCode}>
-            <span>{targerCurrency.code}</span>
+            <span>{targetCurrency.code}</span>
 
             <TriangleIcon />
           </div>
-          <div className={classes.currencyName}>{targerCurrency.name}</div>
+          <div className={classes.currencyName}>
+            {targetCurrency.shortName || targetCurrency.name}
+          </div>
         </div>
 
         <div

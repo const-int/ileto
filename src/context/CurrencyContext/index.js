@@ -1,22 +1,13 @@
-import React, { useState, createContext, useEffect } from "react";
+import React, { useState, createContext } from "react";
+import useExchangeRate from "./useExchangeRate";
+import { getCurrency } from "./currencyList";
 
 const CurrencyContext = createContext({ value: "" });
 
-const USD = {
-  code: "USD",
-  name: "U.S. Dollar",
-};
-const RUB = {
-  code: "RUB",
-  name: "Russian Ruble",
-};
-
 function CurrencyContextProvider({ children }) {
-  const API_URL = 'https://api.exchangeratesapi.io/latest';
-
-  const [sourceCurrency, setSourceCurrency] = useState(USD);
-  const [targerCurrency, setTargerCurrency] = useState(RUB);
-  const [exchangeRate, setExchangeRate] = useState(1);
+  const [sourceCurrency, setSourceCurrency] = useState(getCurrency("USD"));
+  const [targetCurrency, setTargetCurrency] = useState(getCurrency("RUB"));
+  const exchangeRate = useExchangeRate(sourceCurrency.code, targetCurrency.code);
 
   function exchange(value) {
     const result = value * exchangeRate;
@@ -24,23 +15,16 @@ function CurrencyContextProvider({ children }) {
     return `${result.toFixed(result > 999 ? 0 : 2)}`;
   }
 
-  async function getExchangeRate(source, target) {
-    fetch(`${API_URL}?base=${source.code}&symbols=${target.code}`)
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.rates && data.rates[target.code]) {
-        setExchangeRate(data.rates[target.code])
-      }
-    });
-  }
+  function swap() {
+    const nextTarget = sourceCurrency;
 
-  useEffect(() => {
-    getExchangeRate(sourceCurrency, targerCurrency)
-  }, [sourceCurrency, targerCurrency])
+    setSourceCurrency(targetCurrency);
+    setTargetCurrency(nextTarget);
+  }
 
   return (
     <CurrencyContext.Provider
-      value={{ targerCurrency, sourceCurrency, exchange }}
+      value={{ targetCurrency, sourceCurrency, exchange, swap }}
     >
       {children}
     </CurrencyContext.Provider>

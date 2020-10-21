@@ -9,7 +9,7 @@ function Display() {
   const classes = useStyles();
   const { formatCurrencyValue } = StringUtils;
   const { value: sourceValue } = useContext(ValueContext);
-  const { sourceCurrency, targerCurrency, exchange } = useContext(
+  const { sourceCurrency, targetCurrency, exchange } = useContext(
     CurrencyContext
   );
 
@@ -21,7 +21,7 @@ function Display() {
     <div className={classes.root}>
       <Chart
         sourceCurrency={sourceCurrency}
-        targerCurrency={targerCurrency}
+        targetCurrency={targetCurrency}
         sourceValue={formattedSourceValue}
         targetValue={sourceValue ? formattedTargetValue : ""}
       />
