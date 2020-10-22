@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import StringUtils from "utils/StringUtils";
 import ValueContext from "context/ValueContext";
 import CurrencyContext from "context/CurrencyContext";
-import useStyles from "components/Display/useStyles";
 import Chart from "./Chart";
+import useStyles from "./useStyles";
 
 function Display() {
   const classes = useStyles();

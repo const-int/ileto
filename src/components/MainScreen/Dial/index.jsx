@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import ValueContext from "context/ValueContext";
-import NumberButton from "components/Dial/NumberButton";
-import DotButton from "components/Dial/DotButton";
-import useStyles from "components/Dial/useStyles";
+import NumberButton from "./NumberButton";
+import DotButton from "./DotButton";
+import useStyles from "./useStyles";
 import Icon1Svg from "./img/1.svg";
 import Icon2Svg from "./img/2.svg";
 import Icon3Svg from "./img/3.svg";

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import useStyles from "components/Dial/DotButton/useStyles";
 import { Button } from "@material-ui/core";
+import useStyles from "./useStyles";
 
 function BackspaceButton({ onClick }) {
   const classes = useStyles();

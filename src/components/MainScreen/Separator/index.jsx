@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import CurrencyContext from "context/CurrencyContext";
-import useStyles from "components/Separator/useStyles";
 import IconButton from "./IconButton";
+import useStyles from "./useStyles";
 import ArrowsSvg from "./img/arrows.svg";
 
 function Separator() {

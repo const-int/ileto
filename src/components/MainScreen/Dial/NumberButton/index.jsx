@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import useStyles from "components/Dial/NumberButton/useStyles";
 import { Button } from "@material-ui/core";
+import useStyles from "./useStyles";
 
 function NumberButton({ label, onClick }) {
   const classes = useStyles();

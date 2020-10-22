@@ -8,6 +8,7 @@ export default makeStyles((theme) => ({
     padding: [[60, 0]],
     height: "100%",
     backgroundColor: theme.color.background,
+    visibility: ({isHidden}) => isHidden ? "hidden" : "visible",
 
     "@media(max-height: 700px)": {
       gridGap: 50,

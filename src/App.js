@@ -1,43 +1,25 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ThemeProvider from 'providers/ThemeProvider';
-import { ValueContextProvider } from "context/ValueContext";
 import { CurrencyContextProvider } from "context/CurrencyContext";
-import Container from "components/Container";
-import Separator from "components/Separator";
-import Display from 'components/Display';
-import Dial from 'components/Dial';
+import ViewportUtils from "utils/ViewportUtils";
+import MainScreen from "components/MainScreen";
+import Menus from "components/Menus";
 
 function App() {
-  const root = document.documentElement;
+  const { setAppDimensionsViewportListner } = ViewportUtils;
+  const [menu, setMenu] = useState("");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (!visualViewport) {
-      return;
-    }
-
-    function setAppSize() {
-      root.style.setProperty('--app-height', `${visualViewport.height}px`);
-      root.style.setProperty('--app-top-offset', `${visualViewport.pageTop}px`);
-    }
-
-    setAppSize();
-
-    window.addEventListener("resize", setAppSize);
-
-    return () => window.removeEventListener("resize", setAppSize);
-  }, [root.style]);
+    setAppDimensionsViewportListner()
+  }, [setAppDimensionsViewportListner]);
 
   return (
     <ThemeProvider>
-        <Container>
-          <CurrencyContextProvider>
-            <ValueContextProvider>
-              <Display />
-              <Separator />
-              <Dial />
-            </ValueContextProvider>
-          </CurrencyContextProvider>
-        </Container>
+      <CurrencyContextProvider>
+        <MainScreen isMenuOpen={isMenuOpen} />
+        <Menus activeMenu={menu} onEntered={() => setIsMenuOpen(true)} onExit={() => setIsMenuOpen(false)} />
+      </CurrencyContextProvider>
     </ThemeProvider>
   );
 }
