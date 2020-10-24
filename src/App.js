@@ -7,6 +7,7 @@ import Menus from "components/Menus";
 
 function App() {
   const { setAppDimensionsViewportListner } = ViewportUtils;
+  // eslint-disable-next-line no-unused-vars
   const [menu, setMenu] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
