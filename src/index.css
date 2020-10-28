@@ -50,6 +50,10 @@ body {
   box-sizing: border-box;
 }
 
+button {
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 @keyframes cursorBlink {
   from, to {
     background-color: transparent;

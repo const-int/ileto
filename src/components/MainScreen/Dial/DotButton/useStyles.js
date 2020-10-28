@@ -5,7 +5,6 @@ export default makeStyles((theme) => ({
     height: 60,
     minWidth: 60,
     padding: 0,
-    color: theme.color.ripple,
     borderRadius: 4,
     pointerEvents: "all",
     touchAction: "manipulation",
@@ -15,7 +14,7 @@ export default makeStyles((theme) => ({
     },
 
     "&:active $label": {
-      backgroundColor: "#dad7d4"
+      backgroundColor: "#FEE4D5"
     }
   },
   label: {

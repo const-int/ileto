@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import useFontSize from "./useFontSize";
 import useStyles from "./useStyles";
-import TriangleIcon from "./TriangleIcon";
+import TriangleIcon from "../Currency/ChevronIcon";
 
 function Chart({ sourceCurrency, targetCurrency, sourceValue, targetValue }) {
   const sourceValueContainerEl = useRef(null);

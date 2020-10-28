@@ -4,6 +4,7 @@ export default makeStyles(() => ({
   root: {
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
   },
   grid: {
     width: "100%",

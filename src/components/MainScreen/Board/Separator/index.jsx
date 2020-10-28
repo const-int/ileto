@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import CurrencyContext from "context/CurrencyContext";
-import IconButton from "./IconButton";
+import SwapButton from "./SwapButton";
+import ExchangeRate from "./ExchangeRate";
 import useStyles from "./useStyles";
-import ArrowsSvg from "./img/arrows.svg";
 
 function Separator() {
   const classes = useStyles();
@@ -10,13 +10,12 @@ function Separator() {
 
   return (
     <div className={classes.root}>
-      <IconButton
-        icon={
-          <img src={ArrowsSvg} alt="Arrows Icon" className={classes.icon} />
-        }
-        onClick={swap}
-      />
-      <div className={classes.line} />
+      <div className={classes.button}>
+        <SwapButton onClick={swap} />
+      </div>
+      <div className={classes.exchangeRate}>
+        <ExchangeRate />
+      </div>
     </div>
   );
 }

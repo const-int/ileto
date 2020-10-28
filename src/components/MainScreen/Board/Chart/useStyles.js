@@ -26,7 +26,7 @@ export default makeStyles((theme) => ({
       right: -8,
       bottom: -4,
       left: -8,
-      backgroundColor: "#dad7d4",
+      backgroundColor: "#FEE4D5",
       borderRadius: 4,
       opacity: 0,
       transition: "opacity .2s ease"

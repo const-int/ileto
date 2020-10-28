@@ -9,12 +9,6 @@ function CurrencyContextProvider({ children }) {
   const [targetCurrency, setTargetCurrency] = useState(getCurrency("RUB"));
   const exchangeRate = useExchangeRate(sourceCurrency.code, targetCurrency.code);
 
-  function exchange(value) {
-    const result = value * exchangeRate;
-
-    return `${result.toFixed(result > 999 ? 0 : 2)}`;
-  }
-
   function swap() {
     const nextTarget = sourceCurrency;
 
@@ -24,7 +18,7 @@ function CurrencyContextProvider({ children }) {
 
   return (
     <CurrencyContext.Provider
-      value={{ targetCurrency, sourceCurrency, exchange, swap }}
+      value={{ targetCurrency, sourceCurrency, exchangeRate, swap }}
     >
       {children}
     </CurrencyContext.Provider>

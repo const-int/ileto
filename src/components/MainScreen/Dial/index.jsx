@@ -29,6 +29,7 @@ const digitMap = {
 };
 
 function Dial() {
+  const MAX_LENGTH = 13;
   const DOT = ".";
 
   const classes = useStyles();
@@ -51,12 +52,12 @@ function Dial() {
 
     if (hasDot && (isDot || split[1].length === 2)) {
       return null;
-    } else if (isDot && value.length > 6) {
+    } else if (isDot && value.length > MAX_LENGTH - 2) {
       return null;
     }
 
     // Length limitations
-    if (value.replace(DOT, "").length >= 8) {
+    if (value.replace(DOT, "").length >= MAX_LENGTH) {
       return null;
     }
 

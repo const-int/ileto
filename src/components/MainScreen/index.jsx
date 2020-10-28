@@ -1,16 +1,16 @@
 import React from "react";
 import { ValueContextProvider } from "context/ValueContext";
 import Container from "./Container";
-import Separator from "./Separator";
-import Display from "./Display";
+import Header from "./Header";
+import Board from "./Board";
 import Dial from "./Dial";
 
 function MainScreen({ isMenuOpen }) {
   return (
     <Container isHidden={isMenuOpen}>
       <ValueContextProvider>
-        <Display />
-        <Separator />
+        <Header />
+        <Board />
         <Dial />
       </ValueContextProvider>
     </Container>

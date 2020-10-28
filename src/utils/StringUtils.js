@@ -1,8 +1,4 @@
 const StringUtils = {
-  parseNumberFromString(string) {
-    return parseFloat(string.replace(/[^\d.]/g, ''));
-  },
-
   formatCurrencyValue(value) {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   },

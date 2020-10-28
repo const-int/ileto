@@ -14,7 +14,9 @@ const Theme = createMuiTheme({
   },
   font: {
     primary: "Lato, sans-serif",
-    mono: "'Roboto Mono', monospace",
+  },
+  indent: {
+    sidePadding: 14,
   },
   color: {
     primary: "#FB772F",
@@ -23,7 +25,7 @@ const Theme = createMuiTheme({
     foregroundLight: "#B2AFAB",
     fieldBackground: "#F4F4F4",
     fieldForeground: "#666666",
-    ripple: "#BBBBBB",
+    // ripple: "#DAD7D4",
   },
 });
 

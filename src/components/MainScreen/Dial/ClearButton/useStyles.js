@@ -14,10 +14,10 @@ export default makeStyles((theme) => ({
 
     "&:active": {
       "& $label": {
-        backgroundColor: "#dad7d4"
+        backgroundColor: "#FEE4D5"
       },
       "& $path": {
-        fill: "#dad7d4"
+        fill: "#FEE4D5"
       }
     }
   },
