@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "355e0a9b0ca9d73afe69ffbb36261cd2",
+    "revision": "65ad38a2b5ec33c9888455a9522b117d",
     "url": "/ileto/index.html"
   },
   {
-    "revision": "ed05856204568a4df4f9",
-    "url": "/ileto/static/css/main.23045ade.chunk.css"
+    "revision": "c268296ecc6c2478e6c0",
+    "url": "/ileto/static/css/main.8629c30c.chunk.css"
   },
   {
-    "revision": "480a0688800ae3053bb6",
-    "url": "/ileto/static/js/2.e7f3a9ff.chunk.js"
+    "revision": "aeb58a652e339ea1ed31",
+    "url": "/ileto/static/js/2.654c9039.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "/ileto/static/js/2.e7f3a9ff.chunk.js.LICENSE.txt"
+    "url": "/ileto/static/js/2.654c9039.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ed05856204568a4df4f9",
-    "url": "/ileto/static/js/main.81942f0a.chunk.js"
+    "revision": "c268296ecc6c2478e6c0",
+    "url": "/ileto/static/js/main.52bb29f4.chunk.js"
   },
   {
     "revision": "1c3f22b39fff0ed1e3a1",
@@ -74,9 +74,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bef8639602379476aaade35f341782b6",
     "url": "/ileto/static/media/Lato-Semibold.bef86396.woff"
-  },
-  {
-    "revision": "6a40b773b1a33f78f34681a3f7162eb0",
-    "url": "/ileto/static/media/arrows.6a40b773.svg"
   }
 ]);
