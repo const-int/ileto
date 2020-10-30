@@ -11,13 +11,15 @@ export default makeStyles((theme) => ({
     backgroundColor: theme.color.background,
     border: "2px solid #F2F5F6",
     borderRadius: [["50%"], "!important"],
-    pointerEvents: "all",
     touchAction: "manipulation",
     transition: "background .15s ease, border .15s ease",
     zIndex: 20,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
 
-    "&:hover": {
-      backgroundColor: theme.color.background,
+    "& path": {
+      fill: theme.color.primary,
     },
 
     "&:active": {
@@ -34,17 +36,4 @@ export default makeStyles((theme) => ({
       bottom: -10,
     },
   },
-  label: {
-    position: "relative",
-    zIndex: 2,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100%",
-    width: "100%",
-
-    "& path": {
-      fill: theme.color.primary,
-    }
-  }
 }));

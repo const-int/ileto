@@ -4,18 +4,17 @@ import useStyles from "./useStyles";
 
 function Currency({ value }) {
   const classes = useStyles();
+  const { shortName, name } = value;
 
   return (
-    <div className={classes.currencyLabel}>
+    <button className={classes.root}>
       <div className={classes.currencyCode}>
         <span>{value.code}</span>
 
         <ChevronIcon />
       </div>
-      <div className={classes.currencyName}>
-        {value.shortName || value.name}
-      </div>
-    </div>
+      <div className={classes.currencyName}>{shortName || name}</div>
+    </button>
   );
 }
 

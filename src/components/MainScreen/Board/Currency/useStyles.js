@@ -1,12 +1,13 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
-  currencyLabel: {
+  root: {
+    display: "block",
     position: "relative",
-    pointerEvents: "all",
-    cursor: "pointer",
-    userSelect: "none",
-    WebkitTapHighlightColor: "transparent",
+    padding: 0,
+    textAlign: "left",
+    border: "none",
+    background: "transparent",
 
     "&::after": {
       content: "''",
@@ -54,5 +55,6 @@ export default makeStyles((theme) => ({
     lineHeight: "14px",
     color: "#929199",
     zIndex: 2,
+    whiteSpace: "nowrap"
   },
 }));

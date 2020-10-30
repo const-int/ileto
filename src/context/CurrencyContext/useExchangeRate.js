@@ -19,7 +19,7 @@ function useExchangeRate(sourceCurrencyCode, targetCurrencyCode) {
     getExchangeRate(sourceCurrencyCode, targetCurrencyCode)
   }, [sourceCurrencyCode, targetCurrencyCode])
 
-  return exchangeRate;
+  return exchangeRate > 1 ? Math.round(exchangeRate * 100) / 100 : exchangeRate
 }
 
 export default useExchangeRate;

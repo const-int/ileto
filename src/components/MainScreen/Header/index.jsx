@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "./Icon";
 import Headline from "./Headline";
-import CleanButton from "./ClearButton";
+import AboutButton from "./AboutButton";
 import useStyles from "./useStyles";
 
 function Header() {
@@ -11,7 +11,7 @@ function Header() {
     <div className={classes.root}>
       <Icon />
       <Headline />
-      <CleanButton />
+      <AboutButton />
     </div>
   );
 }

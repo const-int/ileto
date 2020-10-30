@@ -6,12 +6,7 @@ export default makeStyles((theme) => ({
     minWidth: 60,
     padding: 0,
     borderRadius: 4,
-    pointerEvents: "all",
     touchAction: "manipulation",
-
-    "&:hover": {
-      backgroundColor: theme.color.background
-    },
 
     "&:active $label": {
       backgroundColor: "#FEE4D5"
