@@ -16,7 +16,7 @@ export default makeStyles((theme) => ({
       right: -12,
       bottom: -8,
       left: -8,
-      backgroundColor: "#FEE4D5",
+      backgroundColor: theme.color.activeBackground,
       borderRadius: 4,
       opacity: 0,
       transition: "opacity .2s ease"

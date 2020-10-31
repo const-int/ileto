@@ -23,8 +23,8 @@ export default makeStyles((theme) => ({
     },
 
     "&:active": {
-      backgroundColor: "#FEE4D5",
-      borderColor: "#FEE4D5",
+      backgroundColor: theme.color.activeBackground,
+      borderColor: theme.color.activeBackground,
     },
 
     "&::after": {

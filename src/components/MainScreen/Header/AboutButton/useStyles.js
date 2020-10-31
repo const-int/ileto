@@ -15,8 +15,8 @@ export default makeStyles((theme) => ({
     transition: "background .15s ease, border .15s ease",
 
     "&:active": {
-      backgroundColor: "#FEE4D5",
-      borderColor: "#FEE4D5",
+      backgroundColor: theme.color.activeBackground,
+      borderColor: theme.color.activeBackground,
     },
   }
 }));

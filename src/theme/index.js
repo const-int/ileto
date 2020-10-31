@@ -25,7 +25,7 @@ const Theme = createMuiTheme({
     foregroundLight: "#B2AFAB",
     fieldBackground: "#F4F4F4",
     fieldForeground: "#666666",
-    // ripple: "#DAD7D4",
+    activeBackground: "#FEE4D5",
   },
 });
 

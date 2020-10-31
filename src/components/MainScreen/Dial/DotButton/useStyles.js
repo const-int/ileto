@@ -2,31 +2,31 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     height: 60,
-    minWidth: 60,
     padding: 0,
-    borderRadius: 4,
-    touchAction: "manipulation",
+    background: "transparent",
+    border: "none",
 
     "&:active $label": {
-      backgroundColor: "#FEE4D5"
+      backgroundColor: theme.color.activeBackground
     }
   },
   label: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: 60,
-    width: 60,
-    transition: "background .15s ease",
+    height: 40,
+    width: 40,
+    paddingTop: 13,
+    borderRadius: "50%",
+    color: theme.color.fieldForeground,
     backgroundColor: "transparent",
-    borderRadius: "50%"
+    transition: "background .15s ease",
   },
-  dotContainer: {
-    width: 5,
-    height: 20,
-    display: "flex",
-    justifyContent: "flex-start",
-    alignItems: "flex-end",
+  path: {
+    fill: theme.color.fieldForeground
   }
 }));

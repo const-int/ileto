@@ -2,33 +2,38 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     height: 60,
     padding: 0,
-    zIndex: 20,
-    touchAction: "manipulation",
+    background: "transparent",
+    border: "none",
 
     "&:active": {
-      "& $label": {
-        backgroundColor: "#FEE4D5"
-      },
+
       "& $path": {
-        fill: "#FEE4D5"
-      }
+        fill: theme.color.primary
+      },
+
+      "& $circle": {
+        fill: theme.color.activeBackground
+      },
     }
   },
   label: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: 60,
     width: 60,
-    color: theme.color.fieldForeground,
-    borderRadius: "50%",
-    transition: "background .15s ease",
-    backgroundColor: "transparent",
+    height: "100%",
   },
   path: {
     fill: theme.color.background,
+    transition: "fill .15s ease",
+  },
+  circle: {
+    fill: theme.color.primary,
     transition: "fill .15s ease",
   }
 }));

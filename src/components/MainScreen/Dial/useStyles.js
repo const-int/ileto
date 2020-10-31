@@ -12,11 +12,5 @@ export default makeStyles(() => ({
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gridTemplateRows: "repeat(4, 60px)",
-
-    "& > button": {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center"
-    }
   }
 }));
