@@ -9,13 +9,13 @@ import useStyles from "./useStyles";
 
 function Board() {
   const classes = useStyles();
-  const { formatCurrencyValue } = StringUtils;
+  const { addCommasToNumber } = StringUtils;
   const { value: sourceValue } = useContext(ValueContext);
-  const { sourceCurrency, targetCurrency, exchangeRate } = useContext(
+  const { sourceCurrency, targetCurrency, exchange } = useContext(
     CurrencyContext
   );
 
-  const convertedValue = (sourceValue * exchangeRate).toFixed(2);
+  const convertedValue = exchange(sourceValue);
   const convertedValueInteger = Math.trunc(convertedValue);
   const shoulShowCents = convertedValueInteger < 999999999;
   const targetValue = shoulShowCents ? convertedValue : convertedValueInteger;
@@ -24,12 +24,12 @@ function Board() {
     <div className={classes.root}>
       <Source
         currency={sourceCurrency}
-        value={formatCurrencyValue(sourceValue)}
+        value={addCommasToNumber(sourceValue)}
       />
       <Separator />
       <Target
         currency={targetCurrency}
-        value={sourceValue ? formatCurrencyValue(targetValue) : ""}
+        value={sourceValue ? addCommasToNumber(targetValue) : ""}
       />
     </div>
   );

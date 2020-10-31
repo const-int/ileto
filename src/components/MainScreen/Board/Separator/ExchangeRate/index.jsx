@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
-import useStyles from "./useStyles";
+import StringUtils from "utils/StringUtils";
 import CurrencyContext from "context/CurrencyContext";
+import useStyles from "./useStyles";
 
 function ExchangeRate() {
   const classes = useStyles();
-  const { sourceCurrency, targetCurrency, exchangeRate } = useContext(
+  const { addCommasToNumber } = StringUtils;
+  const { sourceCurrency, targetCurrency, getApproximateRate } = useContext(
     CurrencyContext
   );
 
@@ -21,8 +23,8 @@ function ExchangeRate() {
       </svg>
 
       <span className={classes.rate}>
-        {sourceCurrency.sign} 1 = {targetCurrency.sign}{" "}
-        {exchangeRate.toFixed(exchangeRate < 1 ? 5 : 2)}
+        {sourceCurrency.sign} 1 ≈ {targetCurrency.sign}{" "}
+        {addCommasToNumber(getApproximateRate())}
       </span>
     </div>
   );
