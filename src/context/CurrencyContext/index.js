@@ -5,7 +5,7 @@ import { getCurrency } from "./currencyList";
 const CurrencyContext = createContext({ value: "" });
 
 function CurrencyContextProvider({ children }) {
-  const [sourceCurrency, setSourceCurrency] = useState(getCurrency("IDR"));
+  const [sourceCurrency, setSourceCurrency] = useState(getCurrency("RUB"));
   const [targetCurrency, setTargetCurrency] = useState(getCurrency("GBP"));
   const exchangeRate = useExchangeRate(sourceCurrency.code, targetCurrency.code);
 
