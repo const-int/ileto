@@ -6,7 +6,7 @@ const CurrencyContext = createContext({ value: "" });
 
 function CurrencyContextProvider({ children }) {
   const [sourceCurrency, setSourceCurrency] = useState(getCurrency("RUB"));
-  const [targetCurrency, setTargetCurrency] = useState(getCurrency("PLN"));
+  const [targetCurrency, setTargetCurrency] = useState(getCurrency("USD"));
   const exchangeRate = useExchangeRate(sourceCurrency.code, targetCurrency.code);
 
   function swap() {

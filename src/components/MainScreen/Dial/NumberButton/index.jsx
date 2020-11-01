@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+import Hammer from "react-hammerjs";
 import useStyles from "./useStyles";
 
 function NumberButton({ label, onClick }) {
@@ -17,13 +18,15 @@ function NumberButton({ label, onClick }) {
   }
 
   return (
-    <button
-      type="button"
-      className={classnames(classes.root, { "is-active": isActive })}
-      onClick={handleClick}
-    >
-      <span className={classes.label}>{label}</span>
-    </button>
+    <Hammer onTap={handleClick}>
+      <button
+        type="button"
+        className={classnames(classes.root, { "is-active": isActive })}
+        onClick={handleClick}
+      >
+        <span className={classes.label}>{label}</span>
+      </button>
+    </Hammer>
   );
 }
 
