@@ -7,20 +7,21 @@ function NumberButton({ label, onClick }) {
   const classes = useStyles();
   const [isActive, setActive] = useState(false);
 
-  function handleClick() {
+  function handleTouchStart() {
     onClick();
     setActive(true);
+  }
 
-    setTimeout(() => {
-      setActive(false);
-    }, 250);
+  function handleTouchEnd() {
+    setActive(false);
   }
 
   return (
     <button
       type="button"
       className={classnames(classes.root, { "is-active": isActive })}
-      onClick={handleClick}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <span className={classes.label}>{label}</span>
     </button>
