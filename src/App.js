@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import initReactFastclick from 'react-fastclick';
 import ThemeProvider from 'providers/ThemeProvider';
 import { CurrencyContextProvider } from "context/CurrencyContext";
 import ViewportUtils from "utils/ViewportUtils";
@@ -12,7 +13,8 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    setAppDimensionsViewportListner()
+    setAppDimensionsViewportListner();
+    initReactFastclick();
   }, [setAppDimensionsViewportListner]);
 
   return (
