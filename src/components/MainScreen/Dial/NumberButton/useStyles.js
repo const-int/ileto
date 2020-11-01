@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     background: "transparent",
     border: "none",
 
-    "&:active $label": {
+    "&.is-active $label": {
       backgroundColor: theme.color.activeBackground
     }
   },
@@ -23,6 +23,5 @@ export default makeStyles((theme) => ({
     borderRadius: "50%",
     color: theme.color.fieldForeground,
     backgroundColor: "transparent",
-    transition: "background .15s ease",
   }
 }));
