@@ -6,7 +6,7 @@ function useExchangeRate(sourceCurrencyCode, targetCurrencyCode) {
 
   const [exchangeRate, setExchangeRate] = useState(1);
 
-  async function getExchangeRate(source, target) {
+  async function getExchangeRate(sourceCurrencyCode, targetCurrencyCode) {
     const response = await fetch(`${API_URL}?base=${sourceCurrencyCode}&symbols=${targetCurrencyCode}`);
     const json = await response.json();
 

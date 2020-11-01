@@ -10,14 +10,17 @@ function NumberButton({ label, onClick }) {
   function handleClick() {
     onClick();
     setActive(true);
+
+    setTimeout(() => {
+      setActive(false);
+    }, 250);
   }
 
   return (
     <button
-      className={classnames(classes.root, { "is-active": isActive })}
-      onTouchStart={handleClick}
-      onTouchEnd={() => setActive(false)}
       type="button"
+      className={classnames(classes.root, { "is-active": isActive })}
+      onClick={handleClick}
     >
       <span className={classes.label}>{label}</span>
     </button>
