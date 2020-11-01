@@ -26,6 +26,7 @@ html {
   --app-width: 100vw;
   --app-top-offset: 0;
   position: fixed;
+  touch-action: manipulation;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
   pointer-events: none;
 }
 
-#root {
+#app {
   height: 100%;
   margin-top: var(--app-top-offset);
   overflow: hidden;
