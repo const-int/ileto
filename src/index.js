@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FastClick from 'react-fastclick-alt';
 import initReactFastclick from 'react-fastclick';
 import './index.css';
 import App from './App';
@@ -9,7 +10,7 @@ initReactFastclick();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FastClick><App /></FastClick>
   </React.StrictMode>,
   document.getElementById('app')
 );
