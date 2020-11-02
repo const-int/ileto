@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     background: "transparent",
     border: "none",
 
-    "&:active": {
+    "&.is-active": {
 
       "& $path": {
         fill: theme.color.primary

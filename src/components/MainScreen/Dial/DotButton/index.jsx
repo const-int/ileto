@@ -1,12 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 import useStyles from "./useStyles";
+import useOnTap from "hooks/useOnTap";
 
 function BackspaceButton({ onClick }) {
   const classes = useStyles();
+  const { isActive, tapEventProps } = useOnTap(onClick);
 
   return (
-    <button onClick={onClick} className={classes.root}>
+    <button
+      onClick={onClick}
+      className={classnames(classes.root, { "is-active": isActive })}
+      {...tapEventProps}
+    >
       <span className={classes.label}>
         <svg width="5" height="5" viewBox="0 0 5 5" fill="none">
           <path

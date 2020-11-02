@@ -57,6 +57,7 @@ button {
   pointer-events: all;
   user-select: none !important;
   touch-action: manipulation;
+  cursor: pointer;
   -webkit-tap-highlight-color: transparent !important;
   -webkit-touch-callout: none !important;
   -webkit-user-select: none !important;

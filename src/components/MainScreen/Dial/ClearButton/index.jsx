@@ -1,12 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
+import useOnTap from "hooks/useOnTap";
 import useStyles from "./useStyles";
 
 function ClearButton({ onClick }) {
   const classes = useStyles();
+  const { isActive, tapEventProps } = useOnTap(onClick);
 
   return (
-    <button type="button" className={classes.root} onClick={onClick}>
+    <button
+      type="button"
+      className={classnames(classes.root, { "is-active": isActive })}
+      {...tapEventProps}
+    >
       <span className={classes.label}>
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
           <circle cx="20" cy="20" r="20" className={classes.circle} />

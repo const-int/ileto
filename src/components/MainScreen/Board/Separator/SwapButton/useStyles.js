@@ -22,7 +22,7 @@ export default makeStyles((theme) => ({
       fill: theme.color.primary,
     },
 
-    "&:active": {
+    "&.is-active": {
       backgroundColor: theme.color.activeBackground,
       borderColor: theme.color.activeBackground,
     },

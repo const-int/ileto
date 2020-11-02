@@ -22,7 +22,7 @@ export default makeStyles((theme) => ({
       transition: "opacity .2s ease"
     },
 
-    "&:active::after": {
+    "&.is-active::after": {
       opacity: 1,
     },
   },

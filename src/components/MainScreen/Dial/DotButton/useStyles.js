@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     background: "transparent",
     border: "none",
 
-    "&:active $label": {
+    "&.is-active $label": {
       backgroundColor: theme.color.activeBackground
     }
   },
@@ -18,8 +18,8 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: 40,
-    width: 40,
+    height: "100%",
+    width: 60,
     paddingTop: 13,
     borderRadius: "50%",
     color: theme.color.fieldForeground,
