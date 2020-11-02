@@ -10,7 +10,7 @@ function SwapButton({ onClick }) {
 
   return (
     <button
-      onClick={onClick}
+      type="button"
       className={classnames(classes.root, { "is-active": isActive })}
       {...tapEventProps}
     >

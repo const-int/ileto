@@ -26,7 +26,7 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     width: 60,
-    height: "100%",
+    height: 60,
   },
   path: {
     fill: theme.color.background,
