@@ -14,7 +14,7 @@ export default makeStyles((theme) => ({
     borderRadius: 99,
     transition: "background .15s ease, border .15s ease",
 
-    "&:active": {
+    "&.is-active": {
       backgroundColor: theme.color.activeBackground,
       borderColor: theme.color.activeBackground,
     },
