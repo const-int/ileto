@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/ileto/static/css/main.7848b38e.chunk.css",
-    "main.js": "/ileto/static/js/main.9d08cf07.chunk.js",
-    "main.js.map": "/ileto/static/js/main.9d08cf07.chunk.js.map",
+    "main.js": "/ileto/static/js/main.9ac6e411.chunk.js",
+    "main.js.map": "/ileto/static/js/main.9ac6e411.chunk.js.map",
     "runtime-main.js": "/ileto/static/js/runtime-main.22004439.js",
     "runtime-main.js.map": "/ileto/static/js/runtime-main.22004439.js.map",
-    "static/js/2.8de6d1fd.chunk.js": "/ileto/static/js/2.8de6d1fd.chunk.js",
-    "static/js/2.8de6d1fd.chunk.js.map": "/ileto/static/js/2.8de6d1fd.chunk.js.map",
+    "static/js/2.40c7132d.chunk.js": "/ileto/static/js/2.40c7132d.chunk.js",
+    "static/js/2.40c7132d.chunk.js.map": "/ileto/static/js/2.40c7132d.chunk.js.map",
     "index.html": "/ileto/index.html",
-    "precache-manifest.81eff639cd8d7d54216da058faee9f74.js": "/ileto/precache-manifest.81eff639cd8d7d54216da058faee9f74.js",
+    "precache-manifest.698cb75e11f6bb925db6185b7b06a85a.js": "/ileto/precache-manifest.698cb75e11f6bb925db6185b7b06a85a.js",
     "service-worker.js": "/ileto/service-worker.js",
     "static/css/main.7848b38e.chunk.css.map": "/ileto/static/css/main.7848b38e.chunk.css.map",
-    "static/js/2.8de6d1fd.chunk.js.LICENSE.txt": "/ileto/static/js/2.8de6d1fd.chunk.js.LICENSE.txt",
+    "static/js/2.40c7132d.chunk.js.LICENSE.txt": "/ileto/static/js/2.40c7132d.chunk.js.LICENSE.txt",
     "static/media/0.svg": "/ileto/static/media/0.cc817843.svg",
     "static/media/1.svg": "/ileto/static/media/1.55fb78ec.svg",
     "static/media/2.svg": "/ileto/static/media/2.c790b928.svg",
@@ -26,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.22004439.js",
-    "static/js/2.8de6d1fd.chunk.js",
+    "static/js/2.40c7132d.chunk.js",
     "static/css/main.7848b38e.chunk.css",
-    "static/js/main.9d08cf07.chunk.js"
+    "static/js/main.9ac6e411.chunk.js"
   ]
 }
