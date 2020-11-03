@@ -6,7 +6,7 @@ const CurrencyContext = createContext({ value: "" });
 
 function CurrencyContextProvider({ children }) {
   const [sourceCurrency, setSourceCurrency] = useState(getCurrency("RUB"));
-  const [targetCurrency, setTargetCurrency] = useState(getCurrency("PLN"));
+  const [targetCurrency, setTargetCurrency] = useState(getCurrency("GBP"));
   const exchangeRate = useExchangeRate(sourceCurrency.code, targetCurrency.code);
 
   function swap() {
@@ -24,7 +24,7 @@ function CurrencyContextProvider({ children }) {
 
   function getApproximateRate() {
     const re1 = new RegExp(`\\d*\\.?0*\\d{0,3}`);
-    const re2 = new RegExp(`\\d*\\.0*\\d{2}`);
+    const re2 = new RegExp(`\\d*\\.\\d{2}`);
 
     return (exchangeRate).toFixed(10).match(exchangeRate < 1 ? re1 : re2)[0]
   }
