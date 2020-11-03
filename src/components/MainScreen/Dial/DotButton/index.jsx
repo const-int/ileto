@@ -6,7 +6,7 @@ import useOnTap from "hooks/useOnTap";
 
 function BackspaceButton({ onClick }) {
   const classes = useStyles();
-  const { isActive, tapEventProps } = useOnTap(onClick);
+  const { isActive, tapEventProps } = useOnTap(onClick, true);
 
   return (
     <button

@@ -6,7 +6,7 @@ import useStyles from "./useStyles";
 
 function ClearButton({ onClick }) {
   const classes = useStyles();
-  const { isActive, tapEventProps } = useOnTap(onClick);
+  const { isActive, tapEventProps } = useOnTap(onClick, true);
 
   return (
     <button
