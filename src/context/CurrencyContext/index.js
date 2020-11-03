@@ -23,7 +23,7 @@ function CurrencyContextProvider({ children }) {
   }
 
   function getApproximateRate() {
-    const re1 = new RegExp(`\\d*\\.?0*\\d{0,3}`);
+    const re1 = new RegExp(`\\d*\\.?0*[1-9]{0,3}`);
     const re2 = new RegExp(`\\d*\\.\\d{2}`);
 
     return (exchangeRate).toFixed(10).match(exchangeRate < 1 ? re1 : re2)[0]
