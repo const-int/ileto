@@ -8,6 +8,6 @@ export default makeStyles((theme) => ({
     height: 140,
     width: "100%",
     padding: [[50, theme.indent.sidePadding, 10]],
-    backgroundColor: "#F7F9FA"
+    backgroundColor: theme.color.backgroundAlt
   }
 }));

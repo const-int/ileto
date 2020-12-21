@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 import useStyles from "./useStyles";
 
 function CurrencySelectScreen() {
@@ -6,9 +7,7 @@ function CurrencySelectScreen() {
 
   return (
     <div className={classes.root}>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat iusto
-      autem doloribus consequuntur tenetur quidem similique optio modi, odio
-      quis?
+      <Header />
     </div>
   );
 }

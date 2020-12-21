@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import ThemeProvider from 'providers/ThemeProvider';
 import { CurrencyContextProvider } from "context/CurrencyContext";
+import { MenuContextProvider } from "context/MenuContext";
 import ViewportUtils from "utils/ViewportUtils";
 import MainScreen from "components/MainScreen";
-import Menus from "components/Menus";
+import Menu from "components/Menu";
 
 function App() {
   const { setAppDimensionsViewportListner } = ViewportUtils;
-  // eslint-disable-next-line no-unused-vars
-  const [menu, setMenu] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     setAppDimensionsViewportListner();
@@ -18,8 +16,10 @@ function App() {
   return (
     <ThemeProvider>
       <CurrencyContextProvider>
-        <MainScreen isMenuOpen={isMenuOpen} />
-        <Menus activeMenu={menu} onEntered={() => setIsMenuOpen(true)} onExit={() => setIsMenuOpen(false)} />
+        <MenuContextProvider>
+          <MainScreen />
+          <Menu />
+        </MenuContextProvider>
       </CurrencyContextProvider>
     </ThemeProvider>
   );

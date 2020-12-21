@@ -5,9 +5,9 @@ import Header from "./Header";
 import Board from "./Board";
 import Dial from "./Dial";
 
-function MainScreen({ isMenuOpen }) {
+function MainScreen() {
   return (
-    <Container isHidden={isMenuOpen}>
+    <Container>
       <ValueContextProvider>
         <Header />
         <Board />

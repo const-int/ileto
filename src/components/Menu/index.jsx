@@ -1,24 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Slide } from "@material-ui/core";
 import CurrencySelectScreen from "components/CurrencySelectScreen";
-import PropTypes from "prop-types";
+import MenuContext from "context/MenuContext";
 import useStyles from "./useStyles";
 
-function Menus({ activeMenu, onEntered, onExit }) {
+function Menu() {
   const classes = useStyles();
+  const { menu, setIsMenuOpen } = useContext(MenuContext);
 
   const slideProps = {
     direction: "up",
     timeout: 300,
     mountOnEnter: true,
     unmountOnExit: true,
-    onEntered,
-    onExit,
+    onEntered: () => setIsMenuOpen(true),
+    onExit: () => setIsMenuOpen(false),
   };
 
   return (
     <div className={classes.root}>
-      <Slide in={activeMenu === "currencySelect"} {...slideProps}>
+      <Slide in={menu === "currencySelect"} {...slideProps}>
         <div>
           <CurrencySelectScreen />
         </div>
@@ -27,8 +28,4 @@ function Menus({ activeMenu, onEntered, onExit }) {
   );
 }
 
-Menus.propTypes = {
-  activeMenu: PropTypes.string.isRequired,
-};
-
-export default Menus;
+export default Menu;
