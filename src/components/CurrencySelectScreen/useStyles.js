@@ -4,7 +4,7 @@ export default makeStyles(() => ({
   root: {
     maxWidth: 480,
     margin: "0 auto",
-    maxHeight: "100vh",
+    maxHeight: "var(--app-height)",
     overflowY: "scroll",
     pointerEvents: "all",
   }
