@@ -3,10 +3,10 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   root: {
     height: 82,
-    padding: [[0, 24]],
+    padding: [[0, theme.indent.sidePaddingLarge]],
     display: "grid",
     gridTemplateColumns: "20px 1fr 40px",
-    gridGap: 24,
+    gridGap: theme.indent.sidePaddingLarge,
     alignItems: "center",
     backgroundColor: theme.color.backgroundAlt,
     borderBottomWidth: 2,

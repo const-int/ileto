@@ -17,6 +17,7 @@ const Theme = createMuiTheme({
   },
   indent: {
     sidePadding: 14,
+    sidePaddingLarge: 24,
   },
   color: {
     primary: "#FB772F",

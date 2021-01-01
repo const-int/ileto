@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import CurrencyList from "./CurrencyList";
 import useStyles from "./useStyles";
 
 function CurrencySelectScreen() {
@@ -8,6 +9,7 @@ function CurrencySelectScreen() {
   return (
     <div className={classes.root}>
       <Header />
+      <CurrencyList />
     </div>
   );
 }
