@@ -22,16 +22,17 @@
 }
 
 html {
-  /* --app-height: 100vh;
-  --app-width: 100vw; */
+  --app-height: 100vh;
+  --app-width: 100vw;
+  --app-top-offset: 0;
   position: fixed;
   touch-action: manipulation;
 }
 
 body {
   margin: 0;
-  /* height: var(--app-height);
-  width: var(--app-width); */
+  height: var(--app-height);
+  width: var(--app-width);
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,8 +41,8 @@ body {
 }
 
 #app {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  margin-top: var(--app-top-offset);
   overflow: hidden;
   touch-action: manipulation;
 }
