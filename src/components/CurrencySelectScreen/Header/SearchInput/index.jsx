@@ -15,6 +15,8 @@ function SearchInput({ value, setValue, isShown, ref }) {
   useEffect(() => {
     if (isShown) {
       inputRef.current.focus();
+    } else {
+      inputRef.current.blur();
     }
   }, [inputRef, isShown]);
 
