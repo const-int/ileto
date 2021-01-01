@@ -18,5 +18,11 @@ export default makeStyles((theme) => ({
     lineHeight: "30px",
     fontWeight: 600,
     color: theme.color.foreground
+  },
+  buttonWrap: {
+    position: "relative",
+    width: 40,
+    height: 40,
+    zIndex: 2
   }
 }));
