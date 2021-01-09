@@ -9,7 +9,7 @@ function Menu() {
   const { menu, setIsMenuOpen } = useContext(MenuContext);
 
   const slideProps = {
-    direction: "up",
+    direction: "left",
     timeout: 300,
     mountOnEnter: true,
     unmountOnExit: true,
