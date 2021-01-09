@@ -1,17 +1,18 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
-  root: {
+  root: ({ isActive }) => ({
     height: 50,
     display: "flex",
     alignItems: "center",
     width: "100%",
     padding: [[0, theme.indent.sidePaddingLarge]],
-    background: "transparent",
+    background: isActive ? theme.color.primary : "transparent",
     border: "none",
     outline: "none",
-    pointerEvents: "all"
-  },
+    pointerEvents: "all",
+    transition: "background .2s ease"
+  }),
   code: {
     width: 66,
     height: 36,
@@ -27,11 +28,12 @@ export default makeStyles((theme) => ({
     borderRadius: 4,
     letterSpacing: "0.75px"
   },
-  name: {
+  name: ({ isActive }) => ({
     paddingLeft: 15,
-    color: theme.color.fieldForeground,
+    color: isActive ? theme.color.background : theme.color.fieldForeground,
     fontSize: 16,
     lineHeight: "20px",
-    fontWeight: 400
-  }
+    fontWeight: 400,
+    transition: "color .2s ease"
+  })
 }));

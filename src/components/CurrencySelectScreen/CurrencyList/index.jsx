@@ -13,7 +13,12 @@ function CurrencyList() {
       </div>
       <div>
         {currencyList.map((currency) => (
-          <CurrencyRow code={currency.code} name={currency.name} isFavorite />
+          <CurrencyRow
+            code={currency.code}
+            name={currency.name}
+            isFavorite
+            key={currency.code}
+          />
         ))}
       </div>
     </div>

@@ -13,7 +13,7 @@ function BackButton() {
     <button
       type="button"
       className={classnames(classes.root, { "is-active": isActive })}
-      onClick={() => setMenu("")}
+      onClick={() => setMenu(null)}
       {...tapEventProps}
     >
       <svg viewBox="0 0 20 20" fill="none">

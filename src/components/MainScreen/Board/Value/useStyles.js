@@ -17,7 +17,7 @@ export default makeStyles((theme) => ({
     position: "absolute",
     top: -2,
     right: -3,
-    width: 1,
+    width: 2,
     height: 34,
     backgroundColor: theme.color.primary,
     animation: "1s cursorBlink step-end infinite"

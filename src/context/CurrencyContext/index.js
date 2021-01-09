@@ -31,7 +31,16 @@ function CurrencyContextProvider({ children }) {
 
   return (
     <CurrencyContext.Provider
-      value={{ targetCurrency, sourceCurrency, exchangeRate, exchange, getApproximateRate, swap }}
+      value={{
+        targetCurrency,
+        sourceCurrency,
+        exchangeRate,
+        exchange,
+        getApproximateRate,
+        swap,
+        setSourceCurrency,
+        setTargetCurrency
+      }}
     >
       {children}
     </CurrencyContext.Provider>

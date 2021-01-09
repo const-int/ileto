@@ -19,7 +19,10 @@ function Menu() {
 
   return (
     <div className={classes.root}>
-      <Slide in={menu === "currencySelect"} {...slideProps}>
+      <Slide
+        in={["sourceCurrencySelect", "targetCurrencySelect"].includes(menu)}
+        {...slideProps}
+      >
         <div>
           <CurrencySelectScreen />
         </div>

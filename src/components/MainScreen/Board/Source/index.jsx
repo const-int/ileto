@@ -8,7 +8,7 @@ function Source({ currency, value }) {
 
   return (
     <div className={classes.root}>
-      <Currency value={currency} />
+      <Currency value={currency} type="source" />
       <Value value={value} hasCursor />
     </div>
   );

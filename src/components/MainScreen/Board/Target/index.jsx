@@ -8,7 +8,7 @@ function Target({ currency, value }) {
 
   return (
     <div className={classes.root}>
-      <Currency value={currency} />
+      <Currency value={currency} type="target" />
       <Value value={value} />
     </div>
   );

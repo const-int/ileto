@@ -3,7 +3,7 @@ import React, { useState, createContext } from "react";
 const MenuContext = createContext({ value: "" });
 
 function MenuContextProvider({ children }) {
-  const [menu, setMenu] = useState("currencySelect");
+  const [menu, setMenu] = useState("sourceCurrencySelect");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
