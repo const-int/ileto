@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./Header";
 import CurrencyList from "./CurrencyList";
-import BottomGradient from "./BottomGradient";
 import useStyles from "./useStyles";
 
 function CurrencySelectScreen() {
@@ -11,7 +10,6 @@ function CurrencySelectScreen() {
     <div className={classes.root}>
       <Header />
       <CurrencyList />
-      <BottomGradient />
     </div>
   );
 }

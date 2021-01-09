@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     width: "100%",
     padding: [[0, theme.indent.sidePaddingLarge]],
-    background: isActive ? theme.color.primary : "transparent",
+    background: isActive ? theme.color.activeBackground : "transparent",
     border: "none",
     outline: "none",
     pointerEvents: "all",
@@ -28,12 +28,12 @@ export default makeStyles((theme) => ({
     borderRadius: 4,
     letterSpacing: "0.75px"
   },
-  name: ({ isActive }) => ({
+  name: {
     paddingLeft: 15,
-    color: isActive ? theme.color.background : theme.color.fieldForeground,
+    color: theme.color.fieldForeground,
     fontSize: 16,
     lineHeight: "20px",
     fontWeight: 400,
     transition: "color .2s ease"
-  })
+  },
 }));

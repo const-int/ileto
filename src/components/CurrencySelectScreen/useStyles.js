@@ -7,7 +7,7 @@ export default makeStyles(() => ({
     maxHeight: "var(--app-height)",
     overflowY: "scroll",
     pointerEvents: "all",
-    paddingTop: 82,
+    paddingTop: 70,
     position: "relative"
   }
 }));

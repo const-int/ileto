@@ -6,7 +6,7 @@ export default makeStyles((theme) => ({
     top: 0,
     left: 0,
     width: "100vw",
-    height: 82,
+    height: 70,
     padding: [[0, theme.indent.sidePaddingLarge]],
     display: "grid",
     gridTemplateColumns: "20px 1fr 40px",
@@ -15,7 +15,8 @@ export default makeStyles((theme) => ({
     backgroundColor: theme.color.backgroundAlt,
     borderBottomWidth: 2,
     borderBottomStyle: "solid",
-    borderBottomColor: theme.color.fieldBackground
+    borderBottomColor: theme.color.fieldBackground,
+    zIndex: 20
   },
   label: {
     fontSize: 22,

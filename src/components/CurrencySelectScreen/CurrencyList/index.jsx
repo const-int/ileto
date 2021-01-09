@@ -16,7 +16,6 @@ function CurrencyList() {
           <CurrencyRow
             code={currency.code}
             name={currency.name}
-            isFavorite
             key={currency.code}
           />
         ))}

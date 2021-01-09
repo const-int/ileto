@@ -1,18 +1,17 @@
 import React, { useContext } from "react";
-import classnames from "classnames";
 import MenuContext from "context/MenuContext";
 import useOnTap from "hooks/useOnTap";
 import useStyles from "./useStyles";
 
 function BackButton() {
-  const classes = useStyles();
   const { setMenu } = useContext(MenuContext);
   const { isActive, tapEventProps } = useOnTap(() => {});
+  const classes = useStyles({ isActive });
 
   return (
     <button
       type="button"
-      className={classnames(classes.root, { "is-active": isActive })}
+      className={classes.root}
       onClick={() => setMenu(null)}
       {...tapEventProps}
     >

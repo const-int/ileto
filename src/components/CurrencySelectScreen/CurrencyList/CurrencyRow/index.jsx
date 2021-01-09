@@ -1,35 +1,13 @@
-import React, { useState, useContext } from "react";
-import MenuContext from "context/MenuContext";
-import CurrencyContext from "context/CurrencyContext";
-import { getCurrency } from "context/CurrencyContext/currencyList";
-import useStyles from "./useStyles";
+import React from "react";
+import CurrencySelectButton from "./CurrencySelectButton";
+import FavoriteButton from "./FavoriteButton";
 
-function CurrencyRow({ code, name, isFavorite }) {
-  const [isActive, setIsActive] = useState(false);
-  const classes = useStyles({ isActive });
-  const { setMenu, menu } = useContext(MenuContext);
-  const { setSourceCurrency, setTargetCurrency } = useContext(CurrencyContext);
-
-  function handleClick() {
-    setIsActive(true);
-
-    if (menu === "sourceCurrencySelect") {
-      setSourceCurrency(getCurrency(code));
-    } else {
-      setTargetCurrency(getCurrency(code));
-    }
-
-    setTimeout(() => {
-      setMenu(null);
-      setIsActive(false);
-    }, 300);
-  }
-
+function CurrencyRow({ code, name }) {
   return (
-    <button type="button" className={classes.root} onClick={handleClick}>
-      <div className={classes.code}>{code}</div>
-      <div className={classes.name}>{name}</div>
-    </button>
+    <div style={{ position: "relative" }}>
+      <CurrencySelectButton code={code} name={name} />
+      <FavoriteButton code={code} />
+    </div>
   );
 }
 
