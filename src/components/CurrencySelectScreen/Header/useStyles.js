@@ -2,10 +2,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
-    position: "fixed",
+    position: "sticky",
     top: 0,
-    left: 0,
-    width: "100vw",
     height: 70,
     padding: [[0, theme.indent.sidePaddingLarge]],
     display: "grid",
