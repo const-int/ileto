@@ -9,5 +9,12 @@ export default makeStyles((theme) => ({
     fontSize: 18,
     lineHeight: "24px",
     color: theme.color.foreground
+  },
+  favorites: {
+    paddingBottom: 20,
+    marginBottom: 22,
+    borderBottomWidth: 2,
+    borderBottomColor: theme.color.fieldBackground,
+    borderBottomStyle: "solid"
   }
 }));

@@ -32,25 +32,27 @@ function CurrencyContextProvider({ children }) {
     return (exchangeRate).toFixed(10).match(exchangeRate < 1 ? re1 : re2)[0]
   }
 
+  function updateLocalStorage(value) {
+    localStorage.setItem(LOCALSTORAGE_FAVORITES_KEY, JSON.stringify(value))
+  }
+
   function addFavoriteCurrencyCode(code) {
-    if (favoriteCurrencyCodes[code]) {
-      return;
-    }
+    if (favoriteCurrencyCodes[code]) return;
 
     const updatedFavoriteCurrencyCodes = {...favoriteCurrencyCodes, [code]: true};
 
     setFavoriteCurrencyCodes(updatedFavoriteCurrencyCodes)
-    localStorage.setItem(LOCALSTORAGE_FAVORITES_KEY, JSON.stringify(updatedFavoriteCurrencyCodes))
+    updateLocalStorage(updatedFavoriteCurrencyCodes)
   }
 
   function removeFavoriteCurrencyCode(code) {
-    if (!favoriteCurrencyCodes[code]) {
-      return;
-    }
+    if (!favoriteCurrencyCodes[code]) return;
 
-    const updatedFavoriteCurrencyCodes = {...favoriteCurrencyCodes, [code]: undefined};
+    const updatedFavoriteCurrencyCodes = {...favoriteCurrencyCodes };
+    delete updatedFavoriteCurrencyCodes[code]
+
     setFavoriteCurrencyCodes(updatedFavoriteCurrencyCodes)
-    localStorage.setItem(LOCALSTORAGE_FAVORITES_KEY, JSON.stringify(updatedFavoriteCurrencyCodes))
+    updateLocalStorage(updatedFavoriteCurrencyCodes)
   }
 
   return (
