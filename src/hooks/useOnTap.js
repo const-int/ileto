@@ -27,9 +27,12 @@ function useOnTap(onClick, isQuickPress = false) {
     }
   }
 
-  const tapEventProps = {
+  const isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+
+  const tapEventProps = isTouchDevice ? {
     onTouchStart: handlePress,
     onTouchEnd: handleRelease,
+  } : {
     onMouseDown: handlePress,
     onMouseUp: handleRelease,
   }

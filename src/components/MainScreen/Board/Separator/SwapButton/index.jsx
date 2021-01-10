@@ -6,7 +6,7 @@ import useStyles from "./useStyles";
 
 function SwapButton({ onClick }) {
   const classes = useStyles();
-  const { isActive, tapEventProps } = useOnTap(onClick, true);
+  const { isActive, tapEventProps } = useOnTap(onClick, false);
 
   return (
     <button
