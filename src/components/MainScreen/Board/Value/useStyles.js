@@ -11,7 +11,15 @@ export default makeStyles((theme) => ({
     fontWeight: 700,
     paddingLeft: 20,
     wordBreak: "break-word",
-    textAlign: "right"
+    textAlign: "right",
+
+    "& span": {
+      position: "relative",
+      top: -6,
+      display: "inline-block",
+      verticalAlign: "top",
+      fontSize: 16,
+    }
   },
   cursor: {
     position: "absolute",

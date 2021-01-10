@@ -6,7 +6,10 @@ function Value({ value, hasCursor }) {
 
   return (
     <div className={classes.root}>
-      <div className={classes.value}>{value}</div>
+      <div
+        className={classes.value}
+        dangerouslySetInnerHTML={{ __html: value }}
+      />
 
       {hasCursor && <div className={classes.cursor} />}
     </div>
