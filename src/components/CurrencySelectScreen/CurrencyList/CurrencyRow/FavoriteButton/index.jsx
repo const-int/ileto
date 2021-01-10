@@ -23,13 +23,13 @@ function FavoriteButton({ code }) {
 
     setTimeout(() => {
       setIsActive(false);
-    }, 150);
 
-    if (isFavorite) {
-      removeFavoriteCurrencyCode(code);
-    } else {
-      addFavoriteCurrencyCode(code);
-    }
+      if (isFavorite) {
+        removeFavoriteCurrencyCode(code);
+      } else {
+        addFavoriteCurrencyCode(code);
+      }
+    }, 150);
   }
 
   return (
