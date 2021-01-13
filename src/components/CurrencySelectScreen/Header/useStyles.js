@@ -4,10 +4,10 @@ export default makeStyles((theme) => ({
   root: {
     position: "sticky",
     top: 0,
-    height: 70,
+    height: 60,
     padding: [[0, theme.indent.sidePaddingLarge]],
     display: "grid",
-    gridTemplateColumns: "20px 1fr 40px",
+    gridTemplateColumns: "1fr 32px",
     gridGap: theme.indent.sidePaddingLarge,
     alignItems: "center",
     backgroundColor: theme.color.backgroundAlt,

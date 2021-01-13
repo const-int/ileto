@@ -2,9 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
-    fontSize: 22,
-    lineHeight: "30px",
-    fontWeight: 600,
+    fontSize: 18,
+    fontWeight: 900,
+    lineHeight: "24px",
     color: theme.color.foreground
   }
 }));
