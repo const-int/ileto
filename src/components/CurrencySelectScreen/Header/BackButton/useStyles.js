@@ -16,5 +16,11 @@ export default makeStyles((theme) => ({
       right: -10,
       bottom: -10
     }
-  })
+  }),
+  cross: {
+    width: 10,
+    height: 10,
+    minWidth: 10,
+    display: "block"
+  }
 }));
