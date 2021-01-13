@@ -18,9 +18,9 @@ export default makeStyles((theme) => ({
     }
   }),
   cross: {
-    width: 10,
-    height: 10,
-    minWidth: 10,
+    width: 12,
+    height: 12,
+    minWidth: 12,
     display: "block"
   }
 }));
