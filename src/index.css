@@ -27,6 +27,7 @@ html {
   --app-top-offset: 0;
   position: fixed;
   touch-action: manipulation;
+  overscroll-behavior: contain;
 }
 
 body {
