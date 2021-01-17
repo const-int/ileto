@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ileto/static/css/main.74a9e93c.chunk.css",
+    "main.css": "/ileto/static/css/main.66113381.chunk.css",
     "main.js": "/ileto/static/js/main.ad1425e7.chunk.js",
     "main.js.map": "/ileto/static/js/main.ad1425e7.chunk.js.map",
     "runtime-main.js": "/ileto/static/js/runtime-main.22004439.js",
@@ -8,9 +8,9 @@
     "static/js/2.4a20cf01.chunk.js": "/ileto/static/js/2.4a20cf01.chunk.js",
     "static/js/2.4a20cf01.chunk.js.map": "/ileto/static/js/2.4a20cf01.chunk.js.map",
     "index.html": "/ileto/index.html",
-    "precache-manifest.0ecb814e4b3d34ca9848e0fe7ee7e3a4.js": "/ileto/precache-manifest.0ecb814e4b3d34ca9848e0fe7ee7e3a4.js",
+    "precache-manifest.1478b19ff9eddebdb52ad2045b7f083c.js": "/ileto/precache-manifest.1478b19ff9eddebdb52ad2045b7f083c.js",
     "service-worker.js": "/ileto/service-worker.js",
-    "static/css/main.74a9e93c.chunk.css.map": "/ileto/static/css/main.74a9e93c.chunk.css.map",
+    "static/css/main.66113381.chunk.css.map": "/ileto/static/css/main.66113381.chunk.css.map",
     "static/js/2.4a20cf01.chunk.js.LICENSE.txt": "/ileto/static/js/2.4a20cf01.chunk.js.LICENSE.txt",
     "static/media/0.svg": "/ileto/static/media/0.cc817843.svg",
     "static/media/1.svg": "/ileto/static/media/1.55fb78ec.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.22004439.js",
     "static/js/2.4a20cf01.chunk.js",
-    "static/css/main.74a9e93c.chunk.css",
+    "static/css/main.66113381.chunk.css",
     "static/js/main.ad1425e7.chunk.js"
   ]
 }
