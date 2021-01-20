@@ -50,7 +50,7 @@ export default makeStyles((theme) => ({
   },
   currencyName: {
     position: "relative",
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: 400,
     lineHeight: "14px",
     color: "#929199",

@@ -19,7 +19,7 @@ export default makeStyles((theme) => ({
     }
   },
   rate: {
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: 700,
     lineHeight: "20px",
     color: theme.color.primary,
