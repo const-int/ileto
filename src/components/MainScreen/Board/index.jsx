@@ -17,8 +17,10 @@ function Board() {
 
   const convertedValue = exchange(sourceValue);
   const convertedValueInteger = Math.trunc(convertedValue);
-  const shoulShowCents = convertedValueInteger < 999999999;
-  const targetValue = shoulShowCents ? convertedValue : convertedValueInteger;
+  const shoulShowDecimals = convertedValueInteger < 999;
+  const targetValue = shoulShowDecimals
+    ? convertedValue
+    : convertedValueInteger;
 
   return (
     <div className={classes.root}>
