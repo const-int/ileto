@@ -40,15 +40,19 @@ function Dial() {
   }
 
   function handleDigitButtonClick(digit) {
-    // First input limitations
-    if (!value && [DOT, 0].includes(digit)) {
+    // First zero limitations
+    if (value === "0" && digit !== DOT) {
       return null;
     }
 
     // Dot limitations
+    const isDot = digit === DOT;
     const split = value.split(DOT);
     const hasDot = split.length === 2;
-    const isDot = digit === DOT;
+
+    if (!value && isDot) {
+      return null;
+    }
 
     if (hasDot && (isDot || split[1].length === 2)) {
       return null;
