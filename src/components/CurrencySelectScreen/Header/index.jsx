@@ -7,11 +7,14 @@ import useStyles from "./useStyles";
 function Header() {
   const { menu } = useContext(MenuContext);
   const classes = useStyles();
-  const type = menu === "sourceCurrencySelect" ? "source" : "target";
+  const title = {
+    [menu === "sourceCurrencySelect"]: "Converting from...",
+    [menu === "targetCurrencySelect"]: "Converting to...",
+  }.true;
 
   return (
     <div className={classes.root}>
-      <Label text={`Select ${type} currency`} />
+      <Label text={title} />
       <BackButton />
     </div>
   );
