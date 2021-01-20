@@ -10,7 +10,7 @@ const StringUtils = {
       result = num.replace(re, ",");
     }
 
-    return result.replaceAll(",", "<span>'</span>")
+    return result;
   },
 }
 
