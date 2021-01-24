@@ -9,7 +9,11 @@ function Label({ text }) {
 }
 
 Label.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
+};
+
+Label.defaultProps = {
+  text: "",
 };
 
 export default Label;

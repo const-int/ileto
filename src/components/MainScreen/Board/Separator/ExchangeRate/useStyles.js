@@ -5,23 +5,16 @@ export default makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: [[0, 17, 0, 8]],
+    padding: [[0, 15]],
     height: 40,
     border: "2px solid #F2F5F6",
     backgroundColor: theme.color.background,
     borderRadius: 99,
   },
-  icon: {
-    margin: [[0, 12, 1, 0]],
-
-    "& path": {
-      fill: theme.color.primary,
-    }
-  },
   rate: {
     fontSize: 14,
     fontWeight: 700,
-    lineHeight: "20px",
+    lineHeight: "14px",
     color: theme.color.primary,
   }
 }));
