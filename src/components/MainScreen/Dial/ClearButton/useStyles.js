@@ -33,7 +33,13 @@ export default makeStyles((theme) => ({
     transition: "fill .15s ease",
   },
   circle: {
-    fill: theme.color.primary,
+    height: 40,
+    width: 40,
+    backgroundColor: theme.color.primary,
     transition: "fill .15s ease",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: "50%"
   }
 }));
