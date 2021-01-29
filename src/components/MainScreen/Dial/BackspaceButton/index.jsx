@@ -29,6 +29,7 @@ function BackspaceButton({ onClick }) {
       pressTimeout.current = null;
       deletionInterval.current = null;
     }
+    // eslint-disable-next-line
   }, [isActive]);
 
   return (
