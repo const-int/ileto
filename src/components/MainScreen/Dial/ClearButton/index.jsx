@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 import useOnTap from "hooks/useOnTap";
 import useStyles from "./useStyles";
 
-function ClearButton({ onClick }) {
+function ClearButton({ onClick, onLongPress }) {
   const classes = useStyles();
   const { isActive, tapEventProps } = useOnTap(onClick, true);
+
+  useEffect(() => {
+    if (isActive) {
+      setTimeout(() => {
+        onLongPress();
+      }, 1300);
+    }
+  }, [isActive, onLongPress]);
 
   return (
     <button
@@ -30,6 +38,7 @@ function ClearButton({ onClick }) {
 
 ClearButton.propTypes = {
   onClick: PropTypes.func.isRequired,
+  onLongPress: PropTypes.func.isRequired,
 };
 
 export default ClearButton;
