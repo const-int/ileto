@@ -36,11 +36,11 @@ function Dial() {
   const { setValue, value } = useContext(ValueContext);
 
   function handleBackspaceButtonClick() {
-    setValue(value.substring(0, value.length - 1));
-  }
+    setValue((prevValue) => {
+      const nextValue = prevValue.substring(0, prevValue.length - 1);
 
-  function handleBackspaceButtonLongPress() {
-    setValue("");
+      return nextValue;
+    });
   }
 
   function handleDigitButtonClick(digit) {
@@ -90,10 +90,7 @@ function Dial() {
           onClick={() => handleDigitButtonClick(0)}
         />
 
-        <BackspaceButton
-          onClick={handleBackspaceButtonClick}
-          onLongPress={handleBackspaceButtonLongPress}
-        />
+        <BackspaceButton onClick={handleBackspaceButtonClick} />
       </div>
     </div>
   );

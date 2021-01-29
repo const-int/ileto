@@ -3,21 +3,33 @@ import PropTypes from "prop-types";
 import useOnTap from "hooks/useOnTap";
 import useStyles from "./useStyles";
 
-function BackspaceButton({ onClick, onLongPress }) {
+function BackspaceButton({ onClick }) {
+  const SEQUENTIAL_DELETION_DELAY = 500;
+  const SEQUENTIAL_DELETION_FREQUENCY = 40;
+
   const { isActive, tapEventProps } = useOnTap(onClick, true);
   const classes = useStyles({ isActive });
-  const timeoutRef = useRef(null);
+  const pressTimeout = useRef(null);
+  const deletionInterval = useRef(null);
+
+  function startSequentialDeletion() {
+    deletionInterval.current = setInterval(() => {
+      onClick();
+    }, SEQUENTIAL_DELETION_FREQUENCY);
+  }
 
   useEffect(() => {
-    if (isActive && !timeoutRef.current) {
-      timeoutRef.current = setTimeout(() => {
-        onLongPress();
-      }, 1000);
+    if (isActive && !pressTimeout.current) {
+      pressTimeout.current = setTimeout(() => {
+        startSequentialDeletion();
+      }, SEQUENTIAL_DELETION_DELAY);
     } else {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
+      clearTimeout(pressTimeout.current);
+      clearTimeout(deletionInterval.current);
+      pressTimeout.current = null;
+      deletionInterval.current = null;
     }
-  }, [isActive, onLongPress]);
+  }, [isActive]);
 
   return (
     <button type="button" className={classes.root} {...tapEventProps}>
@@ -37,7 +49,6 @@ function BackspaceButton({ onClick, onLongPress }) {
 
 BackspaceButton.propTypes = {
   onClick: PropTypes.func.isRequired,
-  onLongPress: PropTypes.func.isRequired,
 };
 
 export default BackspaceButton;
