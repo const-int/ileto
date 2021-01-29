@@ -4,7 +4,7 @@ import CircleButton from "components/Shared/CircleButton";
 import useOnTap from "hooks/useOnTap";
 import useStyles from "./useStyles";
 
-function BackButton() {
+function CloseButton() {
   const { setMenu } = useContext(MenuContext);
   const { isActive, tapEventProps } = useOnTap(() => {});
   const classes = useStyles({ isActive });
@@ -23,4 +23,4 @@ function BackButton() {
   );
 }
 
-export default BackButton;
+export default CloseButton;

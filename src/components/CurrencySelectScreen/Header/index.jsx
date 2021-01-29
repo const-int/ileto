@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import MenuContext from "context/MenuContext";
-import BackButton from "./BackButton";
+import CloseButton from "./CloseButton";
 import Label from "./Label";
 import useStyles from "./useStyles";
 
@@ -15,7 +15,7 @@ function Header() {
   return (
     <div className={classes.root}>
       <Label text={title} />
-      <BackButton />
+      <CloseButton />
     </div>
   );
 }
