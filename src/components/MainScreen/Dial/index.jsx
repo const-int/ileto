@@ -13,7 +13,7 @@ import Icon7Svg from "./img/7.svg";
 import Icon8Svg from "./img/8.svg";
 import Icon9Svg from "./img/9.svg";
 import Icon0Svg from "./img/0.svg";
-import ClearButton from "./ClearButton";
+import BackspaceButton from "./BackspaceButton";
 
 const digitMap = {
   0: Icon0Svg,
@@ -35,11 +35,11 @@ function Dial() {
   const classes = useStyles();
   const { setValue, value } = useContext(ValueContext);
 
-  function handleClearButtonClick() {
+  function handleBackspaceButtonClick() {
     setValue(value.substring(0, value.length - 1));
   }
 
-  function handleClearButtonLongPress() {
+  function handleBackspaceButtonLongPress() {
     setValue("");
   }
 
@@ -90,9 +90,9 @@ function Dial() {
           onClick={() => handleDigitButtonClick(0)}
         />
 
-        <ClearButton
-          onClick={handleClearButtonClick}
-          onLongPress={handleClearButtonLongPress}
+        <BackspaceButton
+          onClick={handleBackspaceButtonClick}
+          onLongPress={handleBackspaceButtonLongPress}
         />
       </div>
     </div>

@@ -1,17 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import useOnTap from "hooks/useOnTap";
 import useStyles from "./useStyles";
 
-function ClearButton({ onClick, onLongPress }) {
+function BackspaceButton({ onClick, onLongPress }) {
   const { isActive, tapEventProps } = useOnTap(onClick, true);
   const classes = useStyles({ isActive });
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
-    if (isActive) {
-      setTimeout(() => {
+    if (isActive && !timeoutRef.current) {
+      timeoutRef.current = setTimeout(() => {
         onLongPress();
-      }, 1300);
+      }, 1000);
+    } else {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
   }, [isActive, onLongPress]);
 
@@ -31,9 +35,9 @@ function ClearButton({ onClick, onLongPress }) {
   );
 }
 
-ClearButton.propTypes = {
+BackspaceButton.propTypes = {
   onClick: PropTypes.func.isRequired,
   onLongPress: PropTypes.func.isRequired,
 };
 
-export default ClearButton;
+export default BackspaceButton;
