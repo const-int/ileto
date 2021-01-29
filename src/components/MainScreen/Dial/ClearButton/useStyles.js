@@ -9,17 +9,6 @@ export default makeStyles((theme) => ({
     padding: 0,
     background: "transparent",
     border: "none",
-
-    "&.is-active": {
-
-      "& $path": {
-        fill: theme.color.primary
-      },
-
-      "& $circle": {
-        fill: theme.color.activeBackground
-      },
-    }
   },
   label: {
     display: "flex",
@@ -33,9 +22,9 @@ export default makeStyles((theme) => ({
     transition: "fill .15s ease",
   },
   circle: {
+    backgroundColor: ({ isActive }) => isActive ? theme.color.activeBackground2 : theme.color.primary,
     height: 40,
     width: 40,
-    backgroundColor: theme.color.primary,
     transition: "fill .15s ease",
     display: "flex",
     justifyContent: "center",
