@@ -36,6 +36,10 @@ function Dial() {
   const { setValue, value } = useContext(ValueContext);
 
   function handleClearButtonClick() {
+    setValue(value.substring(0, value.length - 1));
+  }
+
+  function handleClearButtonLongPress() {
     setValue("");
   }
 
@@ -86,7 +90,10 @@ function Dial() {
           onClick={() => handleDigitButtonClick(0)}
         />
 
-        <ClearButton onClick={handleClearButtonClick} />
+        <ClearButton
+          onClick={handleClearButtonClick}
+          onLongPress={handleClearButtonLongPress}
+        />
       </div>
     </div>
   );
