@@ -32,7 +32,7 @@ function CurrencySelectButton({ code, name, countryCode }) {
   return (
     <button type="button" className={classes.root} onClick={handleClick}>
       <img
-        src={`/images/flags/1x1/${countryCode}.svg`}
+        src={`/images/flags/1x1/${countryCode.toLowerCase()}.svg`}
         alt={`${countryCode} flag`}
         className={classes.flag}
       />
