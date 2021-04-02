@@ -3,6 +3,7 @@ import MenuContext from "context/MenuContext";
 import ChevronIcon from "./ChevronIcon";
 import classnames from "classnames";
 import useOnTap from "hooks/useOnTap";
+import Router from "services/Router";
 import useStyles from "./useStyles";
 
 function Currency({ value, type }) {
@@ -10,6 +11,8 @@ function Currency({ value, type }) {
   const { isActive, tapEventProps } = useOnTap(() => {});
   const { shortName, name } = value;
   const { setMenu } = useContext(MenuContext);
+  const flagFileName = `${value.countryCode?.toLowerCase()}.svg`;
+  const src = Router.getRoute("flags", flagFileName);
 
   function handleClick() {
     setMenu(`${type}CurrencySelect`);
@@ -22,11 +25,7 @@ function Currency({ value, type }) {
       onClick={handleClick}
       {...tapEventProps}
     >
-      <img
-        src={`/images/flags/1x1/${value.countryCode?.toLowerCase()}.svg`}
-        alt={`USA flag`}
-        className={classes.flag}
-      />
+      <img src={src} alt={`USA flag`} className={classes.flag} />
       <div>
         <div className={classes.currencyCode}>
           <span>{value.code}</span>
