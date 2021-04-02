@@ -8,5 +8,5 @@ export default makeStyles((theme) => ({
     height: 112,
     width: "100%",
     padding: [[15, theme.indent.sidePadding]],
-  }
+  },
 }));

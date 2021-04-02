@@ -29,7 +29,7 @@ const Theme = createMuiTheme({
     fieldForeground: "#666666",
     activeBackground: "#FEE4D5",
     activeBackground2: "#FCA06D",
-    flagBorder: "#e8e8e8",
+    flagBorder: "#e4e4e4",
   },
 });
 

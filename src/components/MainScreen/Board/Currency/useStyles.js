@@ -2,7 +2,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
-    display: "block",
+    display: "flex",
+    alignItems: "center",
     position: "relative",
     padding: 0,
     textAlign: "left",
@@ -57,4 +58,15 @@ export default makeStyles((theme) => ({
     zIndex: 2,
     whiteSpace: "nowrap"
   },
+  flag: {
+    position: "relative",
+    width: 36,
+    height: 36,
+    borderRadius: "50%",
+    margin: [[3, 10, 0, 0]],
+    borderWidth: 1,
+    borderStyle: "solid",
+    borderColor: theme.color.flagBorder,
+    zIndex: 2
+  }
 }));

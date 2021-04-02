@@ -22,12 +22,19 @@ function Currency({ value, type }) {
       onClick={handleClick}
       {...tapEventProps}
     >
-      <div className={classes.currencyCode}>
-        <span>{value.code}</span>
+      <img
+        src={`/images/flags/1x1/${value.countryCode?.toLowerCase()}.svg`}
+        alt={`USA flag`}
+        className={classes.flag}
+      />
+      <div>
+        <div className={classes.currencyCode}>
+          <span>{value.code}</span>
 
-        <ChevronIcon />
+          <ChevronIcon />
+        </div>
+        <div className={classes.currencyName}>{shortName || name}</div>
       </div>
-      <div className={classes.currencyName}>{shortName || name}</div>
     </button>
   );
 }
