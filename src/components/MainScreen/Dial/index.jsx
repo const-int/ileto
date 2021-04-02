@@ -29,7 +29,7 @@ const digitMap = {
 };
 
 function Dial() {
-  const MAX_LENGTH = 13;
+  const MAX_LENGTH = 12;
   const DOT = ".";
 
   const classes = useStyles();

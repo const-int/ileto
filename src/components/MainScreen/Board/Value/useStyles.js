@@ -3,13 +3,14 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   root: {
     position: "relative",
+    marginTop: 9
   },
   value: {
     color: theme.color.fieldForeground,
     fontSize: 26,
     lineHeight: "34px",
     fontWeight: 700,
-    paddingLeft: 20,
+    paddingLeft: 6,
     wordBreak: "break-word",
     textAlign: "right",
 
