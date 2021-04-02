@@ -13,27 +13,30 @@ export default makeStyles((theme) => ({
     pointerEvents: "all",
     transition: "background .2s ease"
   }),
+  description: {
+    textAlign: "left"
+  },
   code: {
-    width: 66,
-    height: 36,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: 16,
-    lineHeight: "18px",
-    fontWeight: 700,
-    textTransform: "uppercase",
-    backgroundColor: theme.color.fieldBackground,
     color: theme.color.fieldForeground,
-    borderRadius: 4,
-    letterSpacing: "0.75px"
+    fontSize: 12,
+    lineHeight: "16px",
+    textTransform: "uppercase",
+    fontWeight: 400,
   },
   name: {
-    paddingLeft: 15,
-    color: theme.color.fieldForeground,
+    color: theme.color.foreground,
     fontSize: 16,
     lineHeight: "20px",
     fontWeight: 400,
-    transition: "color .2s ease"
   },
+  flag: {
+    width: 36,
+    height: 36,
+    flexShrink: 0,
+    marginRight: 14,
+    borderRadius: "50%",
+    borderStyle: "solid",
+    borderWidth: 1,
+    borderColor: theme.color.flagBorder
+  }
 }));

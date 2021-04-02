@@ -21,14 +21,17 @@ function CurrencyList() {
           </div>
 
           <div>
-            {favoritesCodes.map((code) => {
-              const currency = getCurrency(code);
+            {favoritesCodes.map((favoriteCurrencyCode) => {
+              const { code, name, countryCode } = getCurrency(
+                favoriteCurrencyCode
+              );
 
               return (
                 <CurrencyRow
-                  code={currency.code}
-                  name={currency.name}
-                  key={currency.code}
+                  code={code}
+                  name={name}
+                  countryCode={countryCode}
+                  key={code}
                 />
               );
             })}
@@ -41,11 +44,12 @@ function CurrencyList() {
       </div>
 
       <div>
-        {currencyList.map((currency) => (
+        {currencyList.map(({ code, name, countryCode }) => (
           <CurrencyRow
-            code={currency.code}
-            name={currency.name}
-            key={currency.code}
+            code={code}
+            name={name}
+            countryCode={countryCode}
+            key={code}
           />
         ))}
       </div>

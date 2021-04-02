@@ -4,7 +4,7 @@ import CurrencyContext from "context/CurrencyContext";
 import { getCurrency } from "context/CurrencyContext/currencyList";
 import useStyles from "./useStyles";
 
-function CurrencySelectButton({ code, name }) {
+function CurrencySelectButton({ code, name, countryCode }) {
   const [isActive, setIsActive] = useState(false);
   const classes = useStyles({ isActive });
   const { setMenu, menu } = useContext(MenuContext);
@@ -31,8 +31,15 @@ function CurrencySelectButton({ code, name }) {
 
   return (
     <button type="button" className={classes.root} onClick={handleClick}>
-      <div className={classes.code}>{code}</div>
-      <div className={classes.name}>{name}</div>
+      <img
+        src={`/images/flags/1x1/${countryCode}.svg`}
+        alt={`${countryCode} flag`}
+        className={classes.flag}
+      />
+      <div className={classes.description}>
+        <div className={classes.name}>{name}</div>
+        <div className={classes.code}>{code}</div>
+      </div>
     </button>
   );
 }
