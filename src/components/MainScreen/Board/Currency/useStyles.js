@@ -14,8 +14,8 @@ export default makeStyles((theme) => ({
       content: "''",
       position: "absolute",
       top: -6,
-      right: -12,
-      bottom: -8,
+      right: -8,
+      bottom: -7,
       left: -8,
       backgroundColor: theme.color.activeBackground,
       borderRadius: 4,
@@ -54,19 +54,18 @@ export default makeStyles((theme) => ({
     fontSize: 14,
     fontWeight: 400,
     lineHeight: "14px",
-    color: "#929199",
+    color: theme.color.foregroundSecondary,
     zIndex: 2,
-    whiteSpace: "nowrap"
+    whiteSpace: "nowrap",
+    paddingLeft: 34
   },
   flag: {
     position: "relative",
-    width: 36,
-    height: 36,
-    borderRadius: "50%",
-    margin: [[3, 10, 0, 0]],
-    borderWidth: 1,
-    borderStyle: "solid",
-    borderColor: theme.color.flagBorder,
+    width: 24,
+    height: 18,
+    borderRadius: 2,
+    margin: [[-4, 9, 0, 0]],
+    boxShadow: `0 0 0 1px ${theme.color.flagBorder}`,
     zIndex: 2
   }
 }));

@@ -25,11 +25,12 @@ const Theme = createMuiTheme({
     backgroundAlt: "#F7F9FA",
     foreground: "#484644",
     foregroundLight: "#B2AFAB",
+    foregroundSecondary: "#929199",
     fieldBackground: "#F4F4F4",
     fieldForeground: "#666666",
     activeBackground: "#FEE4D5",
     activeBackground2: "#FCA06D",
-    flagBorder: "#e4e4e4",
+    flagBorder: "#D1D1D1",
   },
 });
 

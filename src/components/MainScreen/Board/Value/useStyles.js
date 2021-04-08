@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   root: {
     position: "relative",
-    marginTop: 9
   },
   value: {
     color: theme.color.fieldForeground,

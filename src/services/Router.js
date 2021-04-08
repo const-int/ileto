@@ -4,7 +4,7 @@ const Router = {
   },
 
   routes: {
-    flags: `${process.env.PUBLIC_URL}/images/flags/1x1`
+    flags: `${process.env.PUBLIC_URL}/images/flags/4x3`
   }
 }
 

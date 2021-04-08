@@ -25,9 +25,9 @@ function Currency({ value, type }) {
       onClick={handleClick}
       {...tapEventProps}
     >
-      <img src={src} alt={`USA flag`} className={classes.flag} />
       <div>
         <div className={classes.currencyCode}>
+          <img src={src} alt={`USA flag`} className={classes.flag} />
           <span>{value.code}</span>
 
           <ChevronIcon />

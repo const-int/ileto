@@ -30,13 +30,13 @@ export default makeStyles((theme) => ({
     fontWeight: 400,
   },
   flag: {
-    width: 36,
+    width: 48,
     height: 36,
     flexShrink: 0,
     marginRight: 14,
-    borderRadius: "50%",
-    borderStyle: "solid",
-    borderWidth: 1,
-    borderColor: theme.color.flagBorder
+    borderRadius: 4,
+    boxShadow: `0 0 0 1px ${theme.color.flagBorder}`,
+    backgroundColor: theme.color.fieldBackground,
+    overflow: "hidden"
   }
 }));
