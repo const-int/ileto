@@ -19,14 +19,14 @@ export default makeStyles((theme) => ({
   code: {
     color: theme.color.foreground,
     fontSize: 16,
-    lineHeight: "20px",
+    lineHeight: "18px",
     textTransform: "uppercase",
     fontWeight: 400,
   },
   name: {
     color: theme.color.foregroundSecondary,
     fontSize: 14,
-    lineHeight: "16px",
+    lineHeight: "18px",
     fontWeight: 400,
   },
   flag: {
