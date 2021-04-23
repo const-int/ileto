@@ -64,7 +64,7 @@ export default makeStyles((theme) => ({
     width: 24,
     height: 18,
     borderRadius: 2,
-    margin: [[-2, 9, 0, 0]],
+    marginRight: 9,
     boxShadow: `0 0 0 1px ${theme.color.flagBorder}`,
     zIndex: 2
   }
