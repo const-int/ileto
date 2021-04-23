@@ -19,19 +19,6 @@ function CurrencyContextProvider({ children }) {
     setTargetCurrency(nextTarget);
   }
 
-  function exchange(value) {
-    const result = (value * exchangeRate).toString();
-
-    return result.slice(0, result.indexOf(".") + 3);
-  }
-
-  function getApproximateRate() {
-    const re1 = new RegExp(`\\d*\\.?0*[1-9]{0,3}`);
-    const re2 = new RegExp(`\\d*\\.\\d{2}`);
-
-    return (exchangeRate).toFixed(10).match(exchangeRate < 1 ? re1 : re2)[0]
-  }
-
   function updateLocalStorage(value) {
     localStorage.setItem(LOCALSTORAGE_FAVORITES_KEY, JSON.stringify(value))
   }
@@ -61,8 +48,6 @@ function CurrencyContextProvider({ children }) {
         targetCurrency,
         sourceCurrency,
         exchangeRate,
-        exchange,
-        getApproximateRate,
         swap,
         setSourceCurrency,
         setTargetCurrency,

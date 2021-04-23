@@ -7,17 +7,15 @@ function useExchangeRate(sourceCurrencyCode, targetCurrencyCode) {
 
   const [exchangeRate, setExchangeRate] = useState(1);
 
-  async function getExchangeRate(sourceCurrencyCode, targetCurrencyCode) {
+  async function getExchangeRate() {
     const response = await fetch(API_URL);
     const json = await response.json();
 
-    if (json && json.conversion_rate) {
-      setExchangeRate(json.conversion_rate)
-    }
+    setExchangeRate(json?.conversion_rate)
   }
 
   useEffect(() => {
-    getExchangeRate(sourceCurrencyCode, targetCurrencyCode)
+    getExchangeRate()
   }, [sourceCurrencyCode, targetCurrencyCode])
 
   return exchangeRate

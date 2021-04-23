@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import StringUtils from "utils/StringUtils";
+import NumberUtils from "utils/NumberUtils";
 import ValueContext from "context/ValueContext";
 import CurrencyContext from "context/CurrencyContext";
 import Source from "./Source";
@@ -10,17 +11,13 @@ import useStyles from "./useStyles";
 function Board() {
   const classes = useStyles();
   const { addCommasToNumber } = StringUtils;
+  const { formatResultValue } = NumberUtils;
   const { value: sourceValue } = useContext(ValueContext);
-  const { sourceCurrency, targetCurrency, exchange } = useContext(
+  const { sourceCurrency, targetCurrency, exchangeRate } = useContext(
     CurrencyContext
   );
 
-  const convertedValue = exchange(sourceValue);
-  const convertedValueInteger = Math.trunc(convertedValue);
-  const shoulShowDecimals = convertedValueInteger < 999;
-  const targetValue = shoulShowDecimals
-    ? convertedValue
-    : convertedValueInteger;
+  const resultValue = sourceValue * exchangeRate;
 
   return (
     <div className={classes.root}>
@@ -31,7 +28,9 @@ function Board() {
       <Separator />
       <Target
         currency={targetCurrency}
-        value={sourceValue ? addCommasToNumber(targetValue) : ""}
+        value={
+          sourceValue ? addCommasToNumber(formatResultValue(resultValue)) : ""
+        }
       />
     </div>
   );

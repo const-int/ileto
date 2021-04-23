@@ -46,7 +46,7 @@ function Dial() {
   function handleDigitButtonClick(digit) {
     // First zero limitations
     if (value === "0" && digit !== DOT) {
-      return null;
+      return setValue(`${digit}`);
     }
 
     // Dot limitations
