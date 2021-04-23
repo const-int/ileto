@@ -40,8 +40,8 @@ function CurrencySelectButton({ code, name, countryCode }) {
         />
       </div>
       <div className={classes.description}>
-        <div className={classes.name}>{name}</div>
         <div className={classes.code}>{code}</div>
+        <div className={classes.name}>{name}</div>
       </div>
     </button>
   );

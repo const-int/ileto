@@ -17,16 +17,16 @@ export default makeStyles((theme) => ({
     textAlign: "left"
   },
   code: {
-    color: theme.color.fieldForeground,
-    fontSize: 12,
-    lineHeight: "16px",
+    color: theme.color.foreground,
+    fontSize: 16,
+    lineHeight: "20px",
     textTransform: "uppercase",
     fontWeight: 400,
   },
   name: {
-    color: theme.color.foreground,
-    fontSize: 16,
-    lineHeight: "20px",
+    color: theme.color.foregroundSecondary,
+    fontSize: 14,
+    lineHeight: "16px",
     fontWeight: 400,
   },
   flag: {
