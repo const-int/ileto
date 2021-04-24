@@ -13,18 +13,13 @@ function Board() {
   const { addCommasToNumber } = StringUtils;
   const { formatResultValue } = NumberUtils;
   const { value: sourceValue } = useContext(ValueContext);
-  const { sourceCurrency, targetCurrency, exchangeRate } = useContext(
-    CurrencyContext
-  );
+  const { targetCurrency, exchangeRate } = useContext(CurrencyContext);
 
   const resultValue = sourceValue * exchangeRate;
 
   return (
     <div className={classes.root}>
-      <Source
-        currency={sourceCurrency}
-        value={addCommasToNumber(sourceValue)}
-      />
+      <Source value={addCommasToNumber(sourceValue)} />
       <Separator />
       <Target
         currency={targetCurrency}

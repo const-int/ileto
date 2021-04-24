@@ -67,5 +67,14 @@ export default makeStyles((theme) => ({
     marginRight: 9,
     boxShadow: `0 0 0 1px ${theme.color.flagBorder}`,
     zIndex: 2
+  },
+  flag2: {
+    position: "absolute",
+    width: 24,
+    height: 18,
+    borderRadius: 2,
+    marginRight: 9,
+    boxShadow: `0 0 0 1px ${theme.color.flagBorder}`,
+    zIndex: 2
   }
 }));
