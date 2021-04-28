@@ -10,6 +10,7 @@ export default makeStyles((theme) => ({
     border: "2px solid #F2F5F6",
     backgroundColor: theme.color.background,
     borderRadius: 99,
+    userSelect: "none"
   },
   rate: {
     fontSize: 14,

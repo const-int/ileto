@@ -3,7 +3,7 @@ import classnames from "classnames";
 import useOnTap from "hooks/useOnTap";
 import useStyles from "./useStyles";
 
-function AboutButton() {
+function SettingsButton() {
   const classes = useStyles();
   const { isActive, tapEventProps } = useOnTap(() => {});
 
@@ -13,9 +13,9 @@ function AboutButton() {
       className={classnames(classes.root, { "is-active": isActive })}
       {...tapEventProps}
     >
-      About
+      Settings
     </button>
   );
 }
 
-export default AboutButton;
+export default SettingsButton;
