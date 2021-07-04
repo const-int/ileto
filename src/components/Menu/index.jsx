@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Slide } from "@material-ui/core";
 import CurrencySelectScreen from "components/CurrencySelectScreen";
+import SettingsScreen from "components/SettingsScreen";
 import MenuContext from "context/MenuContext";
 import useStyles from "./useStyles";
 
@@ -25,6 +26,12 @@ function Menu() {
       >
         <div>
           <CurrencySelectScreen />
+        </div>
+      </Slide>
+
+      <Slide in={["settings"].includes(menu)} {...slideProps}>
+        <div>
+          <SettingsScreen />
         </div>
       </Slide>
     </div>
