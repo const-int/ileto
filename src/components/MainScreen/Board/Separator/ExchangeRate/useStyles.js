@@ -5,17 +5,16 @@ export default makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: [[0, 15]],
-    height: 40,
-    border: "2px solid #F2F5F6",
-    backgroundColor: theme.color.background,
+    padding: [[0, 14]],
+    height: 42,
+    backgroundColor: theme.color.buttonBackground,
     borderRadius: 99,
     userSelect: "none"
   },
   rate: {
-    fontSize: 14,
-    fontWeight: 700,
-    lineHeight: "14px",
+    fontSize: 12,
+    fontWeight: 900,
+    lineHeight: "16px",
     color: theme.color.primary,
   }
 }));

@@ -7,13 +7,10 @@ export default makeStyles((theme) => ({
     height: 60,
     padding: [[0, theme.indent.sidePaddingLarge]],
     display: "grid",
-    gridTemplateColumns: "1fr 32px",
+    gridTemplateColumns: "1fr 38px",
     gridGap: theme.indent.sidePaddingLarge,
     alignItems: "center",
-    backgroundColor: theme.color.backgroundAlt,
-    borderBottomWidth: 2,
-    borderBottomStyle: "solid",
-    borderBottomColor: theme.color.fieldBackground,
+    backgroundColor: theme.color.menuHeaderBackground,
     zIndex: 20
   },
   label: {

@@ -73,10 +73,10 @@ button:hover {
 
 @keyframes cursorBlink {
   from, to {
-    background-color: transparent;
+    opacity: 0;
   }
   50% {
-    background-color: #FB772F;
+    opacity: 1;
   }
 }
 

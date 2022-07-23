@@ -1,4 +1,6 @@
 import React from "react";
+import SectionTitle from "components/Shared/SectionTitle";
+import Separator from "components/Shared/Separator";
 import Header from "./Header";
 import useStyles from "./useStyles";
 
@@ -8,9 +10,9 @@ function CurrencySelectScreen() {
   return (
     <div className={classes.root}>
       <Header />
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique
-      minima, obcaecati odio modi odit voluptates. Eveniet laborum dolore ipsum!
-      Voluptas?
+      <SectionTitle text="Appearance" />
+      <Separator marginTop={12} />
+      <SectionTitle text="About" />
     </div>
   );
 }

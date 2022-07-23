@@ -14,8 +14,15 @@ function SwapButton({ onClick }) {
       className={classnames(classes.root, { "is-active": isActive })}
       {...tapEventProps}
     >
-      <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
-        <path d="M12.5714 15.5667V7.77778H10.2857V15.5667H6.85714L11.4286 20L16 15.5667H12.5714ZM4.57143 0L0 4.43333H3.42857V12.2222H5.71429V4.43333H9.14286L4.57143 0Z" />
+      <svg
+        width="14"
+        height="22"
+        viewBox="0 0 14 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M4 0L0 5H3V13H5V5H8L4 0Z" />
+        <path d="M10 22L14 17L11 17L11 9L9 9L9 17L6 17L10 22Z" />
       </svg>
     </button>
   );

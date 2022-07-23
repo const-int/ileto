@@ -5,6 +5,6 @@ export default makeStyles((theme) => ({
     fontSize: 18,
     fontWeight: 900,
     lineHeight: "24px",
-    color: theme.color.foreground
+    color: theme.color.primary
   }
 }));

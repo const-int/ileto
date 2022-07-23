@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import CurrencyContext from "context/CurrencyContext";
+import SectionTitle from "components/Shared/SectionTitle";
+import Separator from "components/Shared/Separator";
 import CurrencyRow from "./CurrencyRow";
 import useStyles from "./useStyles";
 import {
@@ -15,16 +17,15 @@ function CurrencyList() {
   return (
     <div className={classes.root}>
       {Boolean(favoritesCodes.length > 0) && (
-        <div className={classes.favorites}>
-          <div className={classes.label}>
-            Favorite currencies ({favoritesCodes.length})
-          </div>
+        <div>
+          <SectionTitle
+            text={`Favorite currencies (${favoritesCodes.length})`}
+          />
 
           <div>
             {favoritesCodes.map((favoriteCurrencyCode) => {
-              const { code, name, countryCode } = getCurrency(
-                favoriteCurrencyCode
-              );
+              const { code, name, countryCode } =
+                getCurrency(favoriteCurrencyCode);
 
               return (
                 <CurrencyRow
@@ -39,9 +40,11 @@ function CurrencyList() {
         </div>
       )}
 
-      <div className={classes.label}>
-        All available currencies ({currencyList.length})
-      </div>
+      <Separator marginTop={12} />
+
+      <SectionTitle
+        text={`All available currencies (${currencyList.length})`}
+      />
 
       <div>
         {currencyList.map(({ code, name, countryCode }) => (
@@ -53,6 +56,8 @@ function CurrencyList() {
           />
         ))}
       </div>
+
+      <div className={classes.footer} />
     </div>
   );
 }

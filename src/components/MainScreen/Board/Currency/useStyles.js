@@ -17,7 +17,7 @@ export default makeStyles((theme) => ({
       right: -8,
       bottom: -7,
       left: -8,
-      backgroundColor: theme.color.activeBackground,
+      backgroundColor: theme.color.activeBackground2,
       borderRadius: 4,
       opacity: 0,
       transition: "opacity .2s ease"
@@ -65,7 +65,7 @@ export default makeStyles((theme) => ({
     height: 18,
     borderRadius: 2,
     marginRight: 9,
-    boxShadow: `0 0 0 1px ${theme.color.flagBorder}`,
+    boxShadow: "0 0 0 1px #8FB1D2",
     zIndex: 2
   },
   flag2: {
@@ -74,7 +74,7 @@ export default makeStyles((theme) => ({
     height: 18,
     borderRadius: 2,
     marginRight: 9,
-    boxShadow: `0 0 0 1px ${theme.color.flagBorder}`,
+    boxShadow: "0 0 0 1px #8FB1D2",
     zIndex: 2
   }
 }));

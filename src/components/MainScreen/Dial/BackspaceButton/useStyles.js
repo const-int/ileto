@@ -9,6 +9,10 @@ export default makeStyles((theme) => ({
     padding: 0,
     background: "transparent",
     border: "none",
+
+    "&.is-active $label": {
+      backgroundColor: theme.color.activeBackground,
+    }
   },
   label: {
     display: "flex",
@@ -16,19 +20,18 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     width: 60,
     height: 60,
+    borderRadius: "50%",
   },
   path: {
     fill: theme.color.background,
     transition: "fill .15s ease",
   },
   circle: {
-    backgroundColor: ({ isActive }) => isActive ? theme.color.activeBackground2 : theme.color.primary,
     height: 40,
     width: 40,
     transition: "fill .15s ease",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: "50%"
   }
 }));

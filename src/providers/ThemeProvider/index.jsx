@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
-import theme from "../../theme";
+import getTheme from "../../theme/getTheme.js";
 
 function ThemeProvider({ children }) {
-  return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
+  return (
+    <MuiThemeProvider theme={getTheme(false)}>{children}</MuiThemeProvider>
+  );
 }
 
 ThemeProvider.defaultProps = {

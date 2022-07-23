@@ -7,6 +7,6 @@ export default makeStyles((theme) => ({
     alignItems: "flex-start",
     height: 112,
     width: "100%",
-    padding: [[15, theme.indent.sidePadding]],
+    padding: [[15, theme.indent.sidePaddingLarge]],
   },
 }));

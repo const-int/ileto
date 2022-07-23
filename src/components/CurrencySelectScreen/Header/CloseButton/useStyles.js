@@ -3,10 +3,15 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   root: ({ isActive }) => ({
     position: "relative",
-    backgroundColor: isActive ? theme.color.activeBackground2 : theme.color.primary,
+    backgroundColor: isActive ? theme.color.activeBackground : theme.color.menuHeaderBackground,
     zIndex: 2,
-    height: 30,
-    width: 30,
+    height: 40,
+    width: 40,
+    padding: 12,
+
+    "& path": {
+      fill: theme.color.primary
+    },
 
     "&::before": {
       content: "''",
@@ -18,9 +23,8 @@ export default makeStyles((theme) => ({
     }
   }),
   cross: {
-    width: 12,
-    height: 12,
-    minWidth: 12,
+    width: 24,
+    height: 24,
     display: "block"
   }
 }));

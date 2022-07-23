@@ -28,7 +28,7 @@ function CurrencySelectButton({ code, name, countryCode }) {
     setTimeout(() => {
       setMenu(null);
       setIsActive(false);
-    }, 300);
+    }, 150);
   }
 
   return (

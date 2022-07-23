@@ -2,10 +2,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
-    marginLeft: 5,
-    color: theme.color.primary,
-    fontSize: 18,
-    lineHeight: "24px",
-    fontWeight: 900,
+    height: 2,
+    backgroundColor: theme.color.menuHeaderBackground,
   }
 }));

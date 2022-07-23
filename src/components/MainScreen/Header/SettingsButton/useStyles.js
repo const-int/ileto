@@ -3,20 +3,18 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   root: {
     marginLeft: "auto",
-    padding: [[0, 10]],
+    padding: [[4, 11]],
     fontSize: 12,
     lineHeight: "16px",
     fontWeight: 700,
-    border: "1px solid",
+    border: "none",
     color: theme.color.primary,
-    borderColor: theme.color.primary,
-    backgroundColor: theme.color.background,
+    backgroundColor: theme.color.buttonBackground,
     borderRadius: 99,
-    transition: "background .15s ease, border .15s ease",
+    transition: "background .15s ease",
 
     "&.is-active": {
       backgroundColor: theme.color.activeBackground,
-      borderColor: theme.color.activeBackground,
     },
   }
 }));

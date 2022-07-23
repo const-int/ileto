@@ -23,5 +23,9 @@ export default makeStyles((theme) => ({
     borderRadius: "50%",
     color: theme.color.fieldForeground,
     backgroundColor: "transparent",
+
+    "& path": {
+      fill: theme.color.fieldForeground
+    }
   }
 }));

@@ -8,8 +8,8 @@ function Header() {
   const { menu } = useContext(MenuContext);
   const classes = useStyles();
   const title = {
-    [menu === "sourceCurrencySelect"]: "Converting from...",
-    [menu === "targetCurrencySelect"]: "Converting to...",
+    [menu === "sourceCurrencySelect"]: "Converting from",
+    [menu === "targetCurrencySelect"]: "Converting to",
   }.true;
 
   return (

@@ -2,10 +2,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles((theme) => ({
   root: {
-    marginLeft: 5,
-    color: theme.color.primary,
+    padding: [[22, theme.indent.sidePaddingLarge, 10]],
     fontSize: 18,
     lineHeight: "24px",
-    fontWeight: 900,
+    color: theme.color.fieldForeground
   }
 }));

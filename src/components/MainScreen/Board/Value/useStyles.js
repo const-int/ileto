@@ -27,7 +27,7 @@ export default makeStyles((theme) => ({
     right: -3,
     width: 2,
     height: 34,
-    backgroundColor: theme.color.primary,
+    backgroundColor: theme.color.fieldForeground,
     animation: "1s cursorBlink step-end infinite"
   }
 }));
