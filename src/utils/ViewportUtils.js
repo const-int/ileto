@@ -1,5 +1,5 @@
 const ViewportUtils = {
-  setAppDimensionsViewportListner() {
+  setAppDimensionsViewportListener() {
     const root = document.documentElement;
 
     if (!visualViewport) {

@@ -7,11 +7,11 @@ import MainScreen from "components/MainScreen";
 import Menu from "components/Menu";
 
 function App() {
-  const { setAppDimensionsViewportListner } = ViewportUtils;
+  const { setAppDimensionsViewportListener } = ViewportUtils;
 
   useEffect(() => {
-    setAppDimensionsViewportListner();
-  }, [setAppDimensionsViewportListner]);
+    setAppDimensionsViewportListener();
+  }, [setAppDimensionsViewportListener]);
 
   return (
     <ThemeProvider>
