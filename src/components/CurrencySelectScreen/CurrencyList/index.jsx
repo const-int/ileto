@@ -17,30 +17,32 @@ function CurrencyList() {
   return (
     <div className={classes.root}>
       {Boolean(favoritesCodes.length > 0) && (
-        <div>
-          <SectionTitle
-            text={`Favorite currencies (${favoritesCodes.length})`}
-          />
-
+        <>
           <div>
-            {favoritesCodes.map((favoriteCurrencyCode) => {
-              const { code, name, countryCode } =
-                getCurrency(favoriteCurrencyCode);
+            <SectionTitle
+              text={`Favorite currencies (${favoritesCodes.length})`}
+            />
 
-              return (
-                <CurrencyRow
-                  code={code}
-                  name={name}
-                  countryCode={countryCode}
-                  key={code}
-                />
-              );
-            })}
+            <div>
+              {favoritesCodes.map((favoriteCurrencyCode) => {
+                const { code, name, countryCode } =
+                  getCurrency(favoriteCurrencyCode);
+
+                return (
+                  <CurrencyRow
+                    code={code}
+                    name={name}
+                    countryCode={countryCode}
+                    key={code}
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
-      )}
 
-      <Separator marginTop={12} />
+          <Separator marginTop={12} />
+        </>
+      )}
 
       <SectionTitle
         text={`All available currencies (${currencyList.length})`}
