@@ -12,6 +12,6 @@ export default makeStyles((theme) => ({
   },
   footer: {
     height: 25,
-    background: `linear-gradient(${theme.color.background}, ${theme.color.menuHeaderBackground})`
+    background: `linear-gradient(${theme.color.background}, ${theme.color.separator})`
   }
 }));

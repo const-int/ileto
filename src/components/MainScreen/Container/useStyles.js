@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     maxWidth: 480,
     margin: "0 auto",
     height: "100%",
-    backgroundColor: theme.color.background,
+    backgroundColor: theme.color.boardBackground,
     visibility: ({isHidden}) => isHidden ? "hidden" : "visible",
   }
 }));

@@ -6,7 +6,7 @@ import { getCurrency } from "./currencyList";
 const CurrencyContext = createContext({ value: "" });
 
 function CurrencyContextProvider({ children }) {
-  const LOCAL_STORAGE_KEY = "favorite_currencries";
+  const LOCAL_STORAGE_KEY = "favorite_currencies";
 
   const [sourceCurrency, setSourceCurrency] = useState(getCurrency("USD"));
   const [targetCurrency, setTargetCurrency] = useState(getCurrency("EUR"));

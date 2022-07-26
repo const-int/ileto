@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     alignItems: "center",
     width: "100%",
     padding: [[0, theme.indent.sidePaddingLarge]],
-    background: isActive ? theme.color.activeBackground2 : "transparent",
+    background: isActive ? (theme.isDarkMode ? theme.color.activeBackground : theme.color.activeBackground2) : "transparent",
     border: "none",
     outline: "none",
     pointerEvents: "all",

@@ -15,23 +15,32 @@ function getTheme(isDarkMode) {
     buttonBackground: "#F1F1F1",
     dialBackground: "#EFEEF4",
     menuHeaderBackground: "#EFEEF4",
+    menuHeaderForeground: "#0658FF",
+    boardBackground: "#FFFFFF",
+    separator: "#EFEEF4"
   }
 
   const darkColors = {
-    primary: "#FB772F",
-    background: "#FFFFFF",
-    foreground: "#484644",
+    primary: "#35E1FF",
+    background: "#002F48",
+    foreground: "#FFFFFF",
     foregroundLight: "#B2AFAB",
-    foregroundSecondary: "#929199",
+    foregroundSecondary: "#a0bfda",
     fieldBackground: "#F4F4F4",
-    fieldForeground: "#666666",
-    activeBackground: "#FEE4D5",
-    activeBackground2: "#FCA06D",
+    fieldForeground: "#FFFFFF",
+    buttonBackground: "#134772",
+    activeBackground: "#093b56",
+    activeBackground2: "#145090",
     flagBorder: "#D1D1D1",
     dialBackground: "#002F48",
+    boardBackground: "#205FA1",
+    menuHeaderForeground: "#FFFFFF",
+    menuHeaderBackground: "#205FA1",
+    separator: "#023652"
   }
 
   return createMuiTheme({
+    isDarkMode,
     props: {
       MuiButtonBase: {
         disableRipple: true

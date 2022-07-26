@@ -13,16 +13,4 @@ export default makeStyles((theme) => ({
     backgroundColor: theme.color.menuHeaderBackground,
     zIndex: 20
   },
-  label: {
-    fontSize: 22,
-    lineHeight: "30px",
-    fontWeight: 600,
-    color: theme.color.foreground
-  },
-  buttonWrap: {
-    position: "relative",
-    width: 40,
-    height: 40,
-    zIndex: 2
-  }
 }));

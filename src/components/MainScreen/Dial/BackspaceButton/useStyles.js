@@ -23,7 +23,7 @@ export default makeStyles((theme) => ({
     borderRadius: "50%",
   },
   path: {
-    fill: theme.color.background,
+    fill: theme.color.primary,
     transition: "fill .15s ease",
   },
   circle: {

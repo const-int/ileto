@@ -19,7 +19,7 @@ function SocialLinks() {
   return (
     <div className={classes.root}>
       {links.map(({ label, icon, href }) => (
-        <Link label={label} icon={icon} href={href} />
+        <Link label={label} icon={icon} href={href} key={label} />
       ))}
     </div>
   );

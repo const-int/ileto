@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import classnames from "classnames";
+import { useTheme } from "@material-ui/core/styles";
 import useStyles from "./useStyles";
 
 function AppearanceOptions() {
+  const theme = useTheme();
   const classes = useStyles();
   const [isActive, setIsActive] = useState(false);
-  const isDarkMode = false;
+  const [isDarkMode, setIsDarkMode] = useState(theme?.isDarkMode || false);
 
-  function handleClick(isDarkMode) {
+  function setTheme(isDarkMode) {
+    setIsDarkMode(isDarkMode);
+
+    document.dispatchEvent(
+      new CustomEvent("updateTheme", { detail: { isDarkMode } })
+    );
+
     if (isActive) {
       return;
     }
@@ -21,7 +29,11 @@ function AppearanceOptions() {
 
   return (
     <div className={classes.root}>
-      <button type="button" className={classes.button} onClick={handleClick}>
+      <button
+        type="button"
+        className={classes.button}
+        onClick={() => setTheme(false)}
+      >
         <div className={classes.title}>
           <div
             className={classnames(
@@ -41,16 +53,16 @@ function AppearanceOptions() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M1 7.5L5.81345 13L16 1"
-              stroke="#0658FF"
-              stroke-width="2"
-            />
+            <path d="M1 7.5L5.81345 13L16 1" stroke="#0658FF" strokeWidth="2" />
           </svg>
         )}
       </button>
 
-      <button type="button" className={classes.button} onClick={handleClick}>
+      <button
+        type="button"
+        className={classes.button}
+        onClick={() => setTheme(true)}
+      >
         <div className={classes.title}>
           <div
             className={classnames(
@@ -70,11 +82,7 @@ function AppearanceOptions() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M1 7.5L5.81345 13L16 1"
-              stroke="#0658FF"
-              stroke-width="2"
-            />
+            <path d="M1 7.5L5.81345 13L16 1" stroke="#0658FF" strokeWidth="2" />
           </svg>
         )}
       </button>

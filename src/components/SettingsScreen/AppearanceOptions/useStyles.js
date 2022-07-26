@@ -18,7 +18,11 @@ export default makeStyles((theme) => ({
     transition: "background .2s ease",
 
     "& > svg": {
-      marginRight: 9
+      marginRight: 9,
+
+      "& path": {
+        stroke: theme.color.primary
+      }
     }
   },
   label: {
@@ -33,7 +37,7 @@ export default makeStyles((theme) => ({
     height: 28,
     borderRadius: 3,
     border: "1px solid #FFF",
-    borderColor: theme.color.flagBorder,
+    borderColor: theme.isDarkMode ? "#3C5564" : theme.color.flagBorder,
 
     "&.is-selected": {
       borderWidth: 1,

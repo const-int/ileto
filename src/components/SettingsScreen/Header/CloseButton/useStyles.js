@@ -8,6 +8,7 @@ export default makeStyles((theme) => ({
     height: 40,
     width: 40,
     padding: 12,
+    transition: "none",
 
     "& path": {
       fill: theme.color.primary
