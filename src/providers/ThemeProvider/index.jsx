@@ -10,7 +10,7 @@ function ThemeProvider({ children }) {
     LocalStorageUtils.get(LOCAL_STORAGE_KEY)?.isDarkMode || false
   );
 
-  console.log(LocalStorageUtils.get(LOCAL_STORAGE_KEY)?.isDarkMode);
+  const theme = getTheme(isDarkMode);
 
   useEffect(() => {
     document.addEventListener("updateTheme", (e) => {
@@ -19,11 +19,19 @@ function ThemeProvider({ children }) {
         isDarkMode: e.detail.isDarkMode,
       });
     });
+
+    const themeColor = isDarkMode
+      ? theme.color.boardBackground
+      : theme.color.primary;
+    document
+      .querySelector("meta[name='theme-color']")
+      .setAttribute("content", themeColor);
+    document
+      .querySelector("meta[name='msapplication-TileColor']")
+      .setAttribute("content", themeColor);
   }, []);
 
-  return (
-    <MuiThemeProvider theme={getTheme(isDarkMode)}>{children}</MuiThemeProvider>
-  );
+  return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
 }
 
 ThemeProvider.defaultProps = {
