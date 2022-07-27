@@ -18,17 +18,16 @@ function ThemeProvider({ children }) {
       LocalStorageUtils.set(LOCAL_STORAGE_KEY, {
         isDarkMode: e.detail.isDarkMode,
       });
+      const themeColor = isDarkMode
+        ? theme.color.boardBackground
+        : theme.color.primary;
+      document
+        .querySelector("meta[name='theme-color']")
+        .setAttribute("content", themeColor);
+      document
+        .querySelector("meta[name='msapplication-TileColor']")
+        .setAttribute("content", themeColor);
     });
-
-    const themeColor = isDarkMode
-      ? theme.color.boardBackground
-      : theme.color.primary;
-    document
-      .querySelector("meta[name='theme-color']")
-      .setAttribute("content", themeColor);
-    document
-      .querySelector("meta[name='msapplication-TileColor']")
-      .setAttribute("content", themeColor);
   }, []);
 
   return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
