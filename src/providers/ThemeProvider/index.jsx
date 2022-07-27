@@ -12,22 +12,29 @@ function ThemeProvider({ children }) {
 
   const theme = getTheme(isDarkMode);
 
+  function setDocumentThemeColor(themeColor) {
+    document
+      .querySelector("meta[name='theme-color']")
+      .setAttribute("content", themeColor);
+    document
+      .querySelector("meta[name='msapplication-TileColor']")
+      .setAttribute("content", themeColor);
+  }
+
   useEffect(() => {
     document.addEventListener("updateTheme", (e) => {
       setIsDarkMode(e.detail.isDarkMode);
       LocalStorageUtils.set(LOCAL_STORAGE_KEY, {
         isDarkMode: e.detail.isDarkMode,
       });
-      const themeColor = isDarkMode
-        ? theme.color.boardBackground
-        : theme.color.primary;
-      document
-        .querySelector("meta[name='theme-color']")
-        .setAttribute("content", themeColor);
-      document
-        .querySelector("meta[name='msapplication-TileColor']")
-        .setAttribute("content", themeColor);
+      setDocumentThemeColor(
+        e.detail.isDarkMode ? theme.color.boardBackground : theme.color.primary
+      );
     });
+
+    setDocumentThemeColor(
+      isDarkMode ? theme.color.boardBackground : theme.color.primary
+    );
   }, []);
 
   return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
