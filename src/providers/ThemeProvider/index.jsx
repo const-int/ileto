@@ -29,8 +29,14 @@ function ThemeProvider({ children }) {
       });
       setDocumentThemeColor(
         e.detail.isDarkMode
-          ? getTheme(e.detail.isDarkMode).color.boardBackground
-          : getTheme(e.detail.isDarkMode).color.primary
+          ? getTheme(true).color.boardBackground
+          : getTheme(false).color.primary
+      );
+
+      console.log(
+        e.detail.isDarkMode
+          ? getTheme(true).color.boardBackground
+          : getTheme(false).color.primary
       );
     });
 
