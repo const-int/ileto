@@ -28,21 +28,11 @@ function ThemeProvider({ children }) {
         isDarkMode: e.detail.isDarkMode,
       });
       setDocumentThemeColor(
-        e.detail.isDarkMode
-          ? getTheme(true).color.boardBackground
-          : getTheme(false).color.primary
-      );
-
-      console.log(
-        e.detail.isDarkMode
-          ? getTheme(true).color.boardBackground
-          : getTheme(false).color.primary
+        getTheme(e.detail.isDarkMode).color.menuHeaderBackground
       );
     });
 
-    setDocumentThemeColor(
-      isDarkMode ? theme.color.boardBackground : theme.color.primary
-    );
+    setDocumentThemeColor(theme.color.menuHeaderBackground);
   }, []);
 
   return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
