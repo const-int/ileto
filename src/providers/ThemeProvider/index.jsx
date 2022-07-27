@@ -28,7 +28,9 @@ function ThemeProvider({ children }) {
         isDarkMode: e.detail.isDarkMode,
       });
       setDocumentThemeColor(
-        e.detail.isDarkMode ? theme.color.boardBackground : theme.color.primary
+        e.detail.isDarkMode
+          ? getTheme(e.detail.isDarkMode).color.boardBackground
+          : getTheme(e.detail.isDarkMode).color.primary
       );
     });
 
