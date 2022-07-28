@@ -21,7 +21,7 @@ export default makeStyles((theme) => ({
       height: 40,
       opacity: isActive ? 1 : 0,
       borderRadius: "50%",
-      backgroundColor: theme.color.activeBackground,
+      backgroundColor: theme.isDarkMode ? theme.color.activeBackground : theme.color.activeBackground2,
       transition: "opacity .2s ease"
     },
   }),

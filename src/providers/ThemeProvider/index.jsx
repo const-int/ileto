@@ -33,6 +33,8 @@ function ThemeProvider({ children }) {
     });
 
     setDocumentThemeColor(theme.color.menuHeaderBackground);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;

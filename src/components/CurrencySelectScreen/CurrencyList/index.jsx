@@ -9,7 +9,7 @@ import {
   getCurrency,
 } from "context/CurrencyContext/currencyList";
 
-function CurrencyList() {
+function CurrencyList({ rootEl }) {
   const classes = useStyles();
   const { favoriteCurrencyCodes } = useContext(CurrencyContext);
   const favoritesCodes = Object.keys(favoriteCurrencyCodes);
@@ -34,6 +34,7 @@ function CurrencyList() {
                     name={name}
                     countryCode={countryCode}
                     key={code}
+                    rootEl={rootEl}
                   />
                 );
               })}
@@ -55,6 +56,7 @@ function CurrencyList() {
             name={name}
             countryCode={countryCode}
             key={code}
+            rootEl={rootEl}
           />
         ))}
       </div>

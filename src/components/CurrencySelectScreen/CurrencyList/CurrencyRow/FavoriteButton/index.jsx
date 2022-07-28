@@ -2,7 +2,9 @@ import React, { useContext, useState } from "react";
 import CurrencyContext from "context/CurrencyContext";
 import useStyles from "./useStyles";
 
-function FavoriteButton({ code }) {
+function FavoriteButton({ code, rootEl }) {
+  const FAVORITE_SECTION_HEIGHT = 70;
+  const LIST_ITEM_HEIGHT = 50;
   const [isActive, setIsActive] = useState(false);
   const classes = useStyles({ isActive });
 
@@ -21,6 +23,8 @@ function FavoriteButton({ code }) {
 
     setIsActive(true);
 
+    const prevScrollTop = rootEl.scrollTop;
+
     setTimeout(() => {
       setIsActive(false);
 
@@ -29,6 +33,20 @@ function FavoriteButton({ code }) {
       } else {
         addFavoriteCurrencyCode(code);
       }
+
+      const prevFavCount = Object.keys(favoriteCurrencyCodes).length;
+      const rowShift = (isFavorite ? -1 : 1) * LIST_ITEM_HEIGHT;
+      let menuShift = 0;
+
+      if (isFavorite && prevFavCount === 1) {
+        menuShift = -1 * FAVORITE_SECTION_HEIGHT;
+      }
+
+      if (!isFavorite && prevFavCount === 0) {
+        menuShift = FAVORITE_SECTION_HEIGHT;
+      }
+
+      rootEl.scrollTop = prevScrollTop + menuShift + rowShift;
     }, 150);
   }
 

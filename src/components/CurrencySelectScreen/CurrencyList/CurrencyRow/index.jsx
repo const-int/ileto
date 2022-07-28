@@ -2,11 +2,11 @@ import React from "react";
 import CurrencySelectButton from "./CurrencySelectButton";
 import FavoriteButton from "./FavoriteButton";
 
-function CurrencyRow({ code, name, countryCode }) {
+function CurrencyRow({ code, name, countryCode, rootEl }) {
   return (
     <div style={{ position: "relative" }}>
       <CurrencySelectButton code={code} name={name} countryCode={countryCode} />
-      <FavoriteButton code={code} />
+      <FavoriteButton code={code} rootEl={rootEl} />
     </div>
   );
 }

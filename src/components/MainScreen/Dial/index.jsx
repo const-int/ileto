@@ -3,16 +3,6 @@ import ValueContext from "context/ValueContext";
 import NumberButton from "./NumberButton";
 import DotButton from "./DotButton";
 import useStyles from "./useStyles";
-import Icon1Svg from "./img/1.svg";
-import Icon2Svg from "./img/2.svg";
-import Icon3Svg from "./img/3.svg";
-import Icon4Svg from "./img/4.svg";
-import Icon5Svg from "./img/5.svg";
-import Icon6Svg from "./img/6.svg";
-import Icon7Svg from "./img/7.svg";
-import Icon8Svg from "./img/8.svg";
-import Icon9Svg from "./img/9.svg";
-import Icon0Svg from "./img/0.svg";
 import BackspaceButton from "./BackspaceButton";
 
 const digitMap = {
