@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import classnames from "classnames";
 import CurrencyContext from "context/CurrencyContext";
 import useStyles from "./useStyles";
 
@@ -6,7 +7,7 @@ function FavoriteButton({ code, rootEl }) {
   const FAVORITE_SECTION_HEIGHT = 70;
   const LIST_ITEM_HEIGHT = 50;
   const [isActive, setIsActive] = useState(false);
-  const classes = useStyles({ isActive });
+  const classes = useStyles();
 
   const {
     favoriteCurrencyCodes,
@@ -51,7 +52,11 @@ function FavoriteButton({ code, rootEl }) {
   }
 
   return (
-    <button type="button" className={classes.root} onClick={handleClick}>
+    <button
+      type="button"
+      className={classnames(classes.root, isActive && "is-active")}
+      onClick={handleClick}
+    >
       {isFavorite ? (
         <svg className={classes.svg} viewBox="0 0 21 20">
           <path d="M10.5 16.0737L16.989 20L15.267 12.6L21 7.62105L13.4505 6.97895L10.5 0L7.5495 6.97895L0 7.62105L5.733 12.6L4.011 20L10.5 16.0737Z" />
